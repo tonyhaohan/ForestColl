@@ -1,0 +1,17 @@
+{
+  "source_revision": "91717ac39bc043fac7490e13beeb082b9cc82fc9",
+  "files": {
+    "src/mcnf_tree/problem.py": "4069a9be8a67acc2668eebeeac8b7edbf878a03c77224276b1708a10e961941d",
+    "src/mcnf_tree/collectives.py": "90ae98d43f1e4e479e59ce6d106147d07e489c5791bdabb548bf13e42d8fcea6",
+    "src/mcnf_tree/defaults.py": "33ae86709261a7e6d424bf7950d6313e328e865988456c15a8bcdc51436bb768",
+    "src/mcnf_tree/linear_model.py": "64eeb6d71394df6f45878bbf175a3af9d3240be52b3d30f9673f2c20808f9d23",
+    "src/mcnf_tree/result_transfer.py": "bf3cdce930aa38e6fbb55684622d6b2c33d7b0fd42ac7f6b1e3b10bc507368e2",
+    "src/mcnf_tree/generation/tasks.py": "83d9992582d5d78bd9241c72a4efa3cb92ae1ad21805123ff17f0e1b58d4138e",
+    "src/mcnf_tree/generation/__init__.py": "ea99945aa7e873e58c944b87a15bc0bc5d20663057ec2104520fdc5d93aa8500",
+    "src/mcnf_tree/generation/problem.py": "cad6ed6203a516ff7c5822ba15945f36936634c23943c4cd5cbc31473572ef07",
+    "src/mcnf_tree/generation/topology.py": "6decfc7097ddca0fa7c06622041d3deddeaf6e9acb9b6506f4e4a464c6b629a5",
+    "src/mcnf_tree/solver_factory/gurobi_native.py": "a7cf4618663ea82ed7c72e3b23a909d26e1759dd7f4a6a5dcd3b9e796240fd72",
+    "src/mcnf_tree/solver_factory/gpu_memory.py": "5adca9a3dd76c339723eadebc5784bf7964873ebce121f6f5c2c1d89e69ebf81",
+    "src/mcnf_tree/solver_factory/presolve_stats.py": "ca7637b5dd7d41afe558943e384d1c193c5ecceaa6cebe5b2ca188d39bd2d9b9"
+  }
+}

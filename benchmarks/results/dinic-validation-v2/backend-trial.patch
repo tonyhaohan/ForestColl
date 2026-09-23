@@ -1,0 +1,30 @@
+diff --git a/parallel/src/BranchingGenerator.java b/parallel/src/BranchingGenerator.java
+index 0da25d5..cff3c55 100644
+--- a/parallel/src/BranchingGenerator.java
++++ b/parallel/src/BranchingGenerator.java
+@@ -1,4 +1,5 @@
+ import org.jgrapht.alg.flow.PushRelabelMFImpl;
++import org.jgrapht.alg.flow.DinicMFImpl;
+ import org.jgrapht.alg.util.Pair;
+ import org.jgrapht.graph.DefaultDirectedWeightedGraph;
+ import org.jgrapht.graph.DefaultWeightedEdge;
+@@ -10,6 +11,7 @@ import java.util.stream.IntStream;
+ import java.util.stream.Stream;
+ 
+ public class BranchingGenerator {
++    public static final String MAX_FLOW_BACKEND = Boolean.getBoolean("forestcoll.dinic") ? "dinic" : "push-relabel";
+ 
+     private static final int NUM_ACCEPT_WORKERS = 4;
+     private static final int NUM_REJECT_WORKERS = 4;
+@@ -159,7 +161,10 @@ public class BranchingGenerator {
+         int chunks = Math.min(
+                 Math.min(Cs.get(wj), getWeight(flowGraph, x, y)),
+                 // The vertex set of this.flowGraph is changed. Cannot reuse MaximumFlow Implementation.
+-                (int) Math.round(new PushRelabelMFImpl<>(flowGraph).calculateMaximumFlow(x, y) - c_sum)
++                // Fork change: optional exact max-flow backend; the packing rule is unchanged.
++                (int) Math.round((MAX_FLOW_BACKEND.equals("dinic")
++                        ? new DinicMFImpl<>(flowGraph).getMaximumFlowValue(x, y)
++                        : new PushRelabelMFImpl<>(flowGraph).calculateMaximumFlow(x, y)) - c_sum)
+         );
+         s_nodes.entrySet().stream()
+                 .forEach(entry -> {

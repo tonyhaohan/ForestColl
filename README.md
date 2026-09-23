@@ -6,6 +6,15 @@
 
 **Note:** The large-scale schedule generation experiments presented in the paper were conducted using the parallelized implementation provided in the `parallel` directory.
 
+## MCNF ClosD / UBD benchmark fork
+
+This fork includes 18 validated ClosD/UBD cases (64/128/256 GPUs, with 0/1/2 GPU failures and replacements). It records tree depth and bandwidth objectives separately; no numerical alpha/beta values are substituted. Upstream algorithm files are unchanged.
+
+- [Results, scope and reproduction instructions](benchmarks/depth_bandwidth.md)
+- [CSV](benchmarks/depth_bandwidth.csv) / [JSON, provenance and bottleneck links](benchmarks/depth_bandwidth.json)
+- [HTML report](benchmarks/depth_bandwidth.html) (open locally) / [comparison chart](benchmarks/depth_bandwidth.png)
+- [Adapter and initial ClosD validation](benchmarks/README.md)
+
 ## Compute Optimal Algorithmic Bandwidth
 
 Compute the optimal allgather/reduce-scatter [algorithmic bandwidth](https://github.com/NVIDIA/nccl-tests/blob/master/doc/PERFORMANCE.md#algorithm-bandwidth) given a network topology. The optimal allgather/reduce-scatter runtime is given by 

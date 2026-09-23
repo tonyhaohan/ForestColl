@@ -1,0 +1,12 @@
+{
+  "retained_out_trees": 14,
+  "original_out_trees": 16,
+  "method": "ForestColl candidates + MCNF depth filter + free LP weights",
+  "status": "infeasible",
+  "objective": null,
+  "horizon": 12,
+  "build_sec": 0.005305165999743622,
+  "solve_sec": 0.024961416005680803,
+  "wall_sec": 0.03394154099805746,
+  "variables": 10920
+}

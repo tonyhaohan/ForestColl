@@ -1,0 +1,5 @@
+from __future__ import annotations
+
+DEFAULT_SOLVER_TIME_LIMIT_SEC = 12 * 60 * 60
+DEFAULT_SINK_THRESHOLD = 1e-5
+DEFAULT_CUOPT_TOLERANCE = 1e-5

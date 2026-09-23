@@ -1,0 +1,575 @@
+{
+  "network": "ubd",
+  "n": 128,
+  "failure_count": 1,
+  "failure_plan": {
+    "num_gpus": 128,
+    "replacements": [
+      {
+        "failed_gpu": 26,
+        "replacement_gpu": 131
+      }
+    ]
+  },
+  "config": {
+    "network": {
+      "type": "ubd",
+      "params": {
+        "rack_x": 8,
+        "rack_y": 8,
+        "pod_x": 2,
+        "pod_y": 1,
+        "n_pod": 1,
+        "extra_gpus": 0,
+        "failed_gpus": [
+          26
+        ],
+        "use_rack_backup": [
+          0
+        ],
+        "logical_gpu_groups": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            131,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ],
+          [
+            64,
+            65,
+            66,
+            67,
+            68,
+            69,
+            70,
+            71,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77,
+            78,
+            79,
+            80,
+            81,
+            82,
+            83,
+            84,
+            85,
+            86,
+            87,
+            88,
+            89,
+            90,
+            91,
+            92,
+            93,
+            94,
+            95,
+            96,
+            97,
+            98,
+            99,
+            100,
+            101,
+            102,
+            103,
+            104,
+            105,
+            106,
+            107,
+            108,
+            109,
+            110,
+            111,
+            112,
+            113,
+            114,
+            115,
+            116,
+            117,
+            118,
+            119,
+            120,
+            121,
+            122,
+            123,
+            124,
+            125,
+            126,
+            127
+          ]
+        ],
+        "bandwidth_inrack": 1.0,
+        "bandwidth_uprack": 4.0,
+        "bandwidth_backup": 4.0,
+        "bandwidth_inpod": 32.0,
+        "bandwidth_uppod": 64.0
+      }
+    },
+    "task": {
+      "type": "allreduce",
+      "params": {
+        "group_size": 128,
+        "data_volume": 1.0
+      }
+    },
+    "comm": {
+      "name": "hwc"
+    },
+    "modeling": {
+      "family": "node_arc",
+      "params": {
+        "time_steps": 12,
+        "beta": 1.0
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.8 | packaged by conda-forge | (main, Dec  5 2024, 08:43:59) [Clang 18.1.8 ]",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "networkx": "3.6.1"
+  },
+  "input_sha256": "d4612258740808f2738ff4907de9279d0dc4a3962c0e5cf0aa63118d9f842af8",
+  "reference": {
+    "name": "ubd128_f1_t12",
+    "num_gpus": 128,
+    "failure_count": 1,
+    "failure_plan": {
+      "num_gpus": 128,
+      "replacements": [
+        {
+          "failed_gpu": 26,
+          "replacement_gpu": 131
+        }
+      ]
+    },
+    "config": {
+      "network": {
+        "type": "ubd",
+        "params": {
+          "rack_x": 8,
+          "rack_y": 8,
+          "pod_x": 2,
+          "pod_y": 1,
+          "n_pod": 1,
+          "extra_gpus": 0,
+          "failed_gpus": [
+            26
+          ],
+          "use_rack_backup": [
+            0
+          ],
+          "logical_gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              131,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ],
+            [
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81,
+              82,
+              83,
+              84,
+              85,
+              86,
+              87,
+              88,
+              89,
+              90,
+              91,
+              92,
+              93,
+              94,
+              95,
+              96,
+              97,
+              98,
+              99,
+              100,
+              101,
+              102,
+              103,
+              104,
+              105,
+              106,
+              107,
+              108,
+              109,
+              110,
+              111,
+              112,
+              113,
+              114,
+              115,
+              116,
+              117,
+              118,
+              119,
+              120,
+              121,
+              122,
+              123,
+              124,
+              125,
+              126,
+              127
+            ]
+          ],
+          "bandwidth_inrack": 1.0,
+          "bandwidth_uprack": 4.0,
+          "bandwidth_backup": 4.0,
+          "bandwidth_inpod": 32.0,
+          "bandwidth_uppod": 64.0
+        }
+      },
+      "task": {
+        "type": "allreduce",
+        "params": {
+          "group_size": 128,
+          "data_volume": 1.0
+        }
+      },
+      "comm": {
+        "name": "hwc"
+      },
+      "modeling": {
+        "family": "node_arc",
+        "params": {
+          "time_steps": 12,
+          "beta": 1.0
+        }
+      }
+    },
+    "objective": 35.31303500872514,
+    "A": [
+      3.3130383809982926,
+      0.8808596549245319,
+      3.365656409671395,
+      3.365676094251031,
+      3.3655442293561535,
+      3.365485049689782,
+      3.365734334473218,
+      3.3658677549506293,
+      3.365725968737704,
+      3.3655948565159695,
+      0.8808230554053506,
+      3.3130292197510802
+    ],
+    "raw_status": "optimal_inaccurate",
+    "max_violation": 0.00017762995805315791,
+    "standard_feasible": false,
+    "original_violations": {
+      "eq": 1.6789433825678578e-06,
+      "ineq": 0.00017762995805315791,
+      "lower_bounds": 4.078914289384894e-07,
+      "upper_bounds": 0.0
+    },
+    "timings": {
+      "main_wall_time_sec": 202.56054908200167,
+      "stage_artifact_wall_time_sec": 1.7092039342969656e-05,
+      "worker_wall_time_sec": 212.21666640305193
+    },
+    "source_sha256": "412c9da123e3bd1515b0f51843dcbde3f45ff8aa61cde3e0a5cc47a035610fbd"
+  },
+  "forest": {
+    "U": 127.0,
+    "k": 4,
+    "search_sec": 0.743505875,
+    "allgather_optimum_time": 31.75,
+    "rs_ag_sequential_bandwidth_time": 63.5,
+    "algorithmic_bandwidth": 4.031496062992126,
+    "backend": "java-parallel",
+    "java_wall_sec": 22.81928075000178,
+    "java_peak_rss_mib": 1234.8125,
+    "split_sec": 13.006247292,
+    "branch_sec": 8.880858541,
+    "mapback_sec": 0.02741220900497865,
+    "tree_count": 137,
+    "max_depth": 13,
+    "min_depth": 4,
+    "allreduce_dependency_depth": 26,
+    "allgather_congestion_time": 31.75,
+    "rs_ag_congestion_time": 63.5,
+    "allreduce_fixed_forest_bandwidth_time": 48.0,
+    "capacity_excess": 0.0,
+    "validated": true
+  },
+  "wall_sec": 30.068153958003677,
+  "peak_rss_mib": 151.3125,
+  "barrier_schedule": {
+    "rounds": 26,
+    "time": 305.375,
+    "steps": [
+      {
+        "phase": "reduce",
+        "level": 0,
+        "duration": 28.0
+      },
+      {
+        "phase": "reduce",
+        "level": 1,
+        "duration": 28.0
+      },
+      {
+        "phase": "reduce",
+        "level": 2,
+        "duration": 11.5
+      },
+      {
+        "phase": "reduce",
+        "level": 3,
+        "duration": 18.0
+      },
+      {
+        "phase": "reduce",
+        "level": 4,
+        "duration": 12.75
+      },
+      {
+        "phase": "reduce",
+        "level": 5,
+        "duration": 7.5
+      },
+      {
+        "phase": "reduce",
+        "level": 6,
+        "duration": 8.25
+      },
+      {
+        "phase": "reduce",
+        "level": 7,
+        "duration": 8.0
+      },
+      {
+        "phase": "reduce",
+        "level": 8,
+        "duration": 3.0
+      },
+      {
+        "phase": "reduce",
+        "level": 9,
+        "duration": 4.0
+      },
+      {
+        "phase": "reduce",
+        "level": 10,
+        "duration": 5.0
+      },
+      {
+        "phase": "reduce",
+        "level": 11,
+        "duration": 3.75
+      },
+      {
+        "phase": "reduce",
+        "level": 12,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 0,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 1,
+        "duration": 8.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 2,
+        "duration": 23.4375
+      },
+      {
+        "phase": "broadcast",
+        "level": 3,
+        "duration": 23.75
+      },
+      {
+        "phase": "broadcast",
+        "level": 4,
+        "duration": 18.75
+      },
+      {
+        "phase": "broadcast",
+        "level": 5,
+        "duration": 26.75
+      },
+      {
+        "phase": "broadcast",
+        "level": 6,
+        "duration": 6.6875
+      },
+      {
+        "phase": "broadcast",
+        "level": 7,
+        "duration": 22.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 8,
+        "duration": 16.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 9,
+        "duration": 6.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 10,
+        "duration": 6.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 11,
+        "duration": 4.75
+      },
+      {
+        "phase": "broadcast",
+        "level": 12,
+        "duration": 3.5
+      }
+    ]
+  }
+}

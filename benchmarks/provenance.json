@@ -1,0 +1,31 @@
+{
+  "forest_revision": "d7bd6a94e443e218aa26f319cbe22c70fe16921f",
+  "platform": "macOS-27.0-arm64-arm-64bit",
+  "python": "3.12.8 | packaged by conda-forge | (main, Dec  5 2024, 08:43:59) [Clang 18.1.8 ]",
+  "java": "openjdk version \"25.0.1\" 2025-10-21 LTS\nOpenJDK Runtime Environment Temurin-25.0.1+8 (build 25.0.1+8-LTS)\nOpenJDK 64-Bit Server VM Temurin-25.0.1+8 (build 25.0.1+8-LTS, mixed mode, sharing)\n",
+  "mcnf_snapshot": {
+    "source_revision": "91717ac39bc043fac7490e13beeb082b9cc82fc9",
+    "files": {
+      "src/mcnf_tree/problem.py": "4069a9be8a67acc2668eebeeac8b7edbf878a03c77224276b1708a10e961941d",
+      "src/mcnf_tree/collectives.py": "90ae98d43f1e4e479e59ce6d106147d07e489c5791bdabb548bf13e42d8fcea6",
+      "src/mcnf_tree/defaults.py": "33ae86709261a7e6d424bf7950d6313e328e865988456c15a8bcdc51436bb768",
+      "src/mcnf_tree/linear_model.py": "64eeb6d71394df6f45878bbf175a3af9d3240be52b3d30f9673f2c20808f9d23",
+      "src/mcnf_tree/result_transfer.py": "bf3cdce930aa38e6fbb55684622d6b2c33d7b0fd42ac7f6b1e3b10bc507368e2",
+      "src/mcnf_tree/generation/tasks.py": "83d9992582d5d78bd9241c72a4efa3cb92ae1ad21805123ff17f0e1b58d4138e",
+      "src/mcnf_tree/generation/__init__.py": "ea99945aa7e873e58c944b87a15bc0bc5d20663057ec2104520fdc5d93aa8500",
+      "src/mcnf_tree/generation/problem.py": "cad6ed6203a516ff7c5822ba15945f36936634c23943c4cd5cbc31473572ef07",
+      "src/mcnf_tree/generation/topology.py": "6decfc7097ddca0fa7c06622041d3deddeaf6e9acb9b6506f4e4a464c6b629a5",
+      "src/mcnf_tree/solver_factory/gurobi_native.py": "a7cf4618663ea82ed7c72e3b23a909d26e1759dd7f4a6a5dcd3b9e796240fd72",
+      "src/mcnf_tree/solver_factory/gpu_memory.py": "5adca9a3dd76c339723eadebc5784bf7964873ebce121f6f5c2c1d89e69ebf81",
+      "src/mcnf_tree/solver_factory/presolve_stats.py": "ca7637b5dd7d41afe558943e384d1c193c5ecceaa6cebe5b2ca188d39bd2d9b9"
+    }
+  },
+  "adapter_sha256": {
+    "evaluate_pruned.py": "da5f582ee632b862b1f1588c798291a0ca07ce4277eb434f1fef8fd15d63b5af",
+    "finite_sweep.py": "1d56eee0e97aab2fe39b9abd195db90306b86bfe4cfaf9c594004fcdf345088f",
+    "clos_benchmark.py": "d1cd00a6dd27024fa93b329cd0d27e6f69356167d78e49a4ecdca54885f8fcfa",
+    "check_clos.py": "4b945034e6748030c65ffe94647a4c3ce2d097009d287d596338b8492bd806ab",
+    "build_report.py": "f26b5791fd0f2f36b5c38f7a20bfb575e9cf8337f283940c1abdfb55719ee311",
+    "setup_java.py": "38c0bdfdafaa49e5960a4959f24b0394240b0b24717a5922e0eb7fcb6b098b13"
+  }
+}

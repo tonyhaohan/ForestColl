@@ -1,0 +1,2 @@
+# Unified diff context lines may consist of one space.
+benchmarks/results/dinic-validation-v2/backend-trial.patch whitespace=-blank-at-eol
