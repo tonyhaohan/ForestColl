@@ -2,7 +2,7 @@ WH1234 的 ClosD + UBD + HPN 共27例对比见 [合并报告](results/wh1234-com
 
 默认端到端报告口径固定为**每卡0.25 MB（十进制250000 bytes）、单位链路400 Gbps、每活跃步0.1 μs启动开销**，保留拓扑容量比例。`build_comparison_report.py`中的`REPORT_DEFAULTS`统一驱动换算、图注和JSON元数据；后续报告沿用该默认值，专项覆盖必须明确列出，不能覆盖默认参考结果。M=N，因此 `time_us = objective * 5 / N + 0.1 * count(A_t > 0)`；从实际导出方案读取活跃步，空轮不收费，不把T直接当活跃步。
 
-[端到端时间图](results/wh1234-comparison-v2/end_to_end.png)隐藏2D，保留其原始结果及表格；端到端时间和计算耗时的纵轴均使用log坐标（底数10）。B∞仅画带宽参考项。我们的曲线使用归档T12方案，红叉保留未过原空间1e-4门槛的数值。参数换算不重新优化调度，也不是硬件实测。
+[端到端时间图](results/wh1234-comparison-v2/end_to_end.png)隐藏2D，保留其原始结果及表格；端到端通信时间的纵轴使用从零开始的线性坐标，算法计算耗时的纵轴使用log坐标（底数10）。B∞仅画带宽参考项。我们的曲线使用归档T12方案，红叉保留未过原空间1e-4门槛的数值。参数换算不重新优化调度，也不是硬件实测。
 
 `main_runtime_reference.json`冻结27个main历史T12的A向量、源哈希及HPN的50倍单位换算；ClosD的A从WH1234原始solution.npz提取，大z不拉回。生成记录在本轮报告的`meta/`。ForestColl的4D活跃步从所选`wave_plan.json.gz`或`lp_plan.json.gz`读取并核对哈希及目标；缺少方案文件时端到端时间保留空值。`main compact`指全模式恒定流紧凑LP的带宽下界，表中记录建模+求解+提取耗时，不能作端到端通信曲线。
 
