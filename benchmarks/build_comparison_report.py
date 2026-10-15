@@ -81,7 +81,7 @@ def plot_runtime(axes, rows):
         ax.scatter(accepted, [part[i]["main_T12_runtime_us"] for i in accepted], marker="s", color="tab:blue", s=25)
         if rejected:
             ax.scatter(rejected, [part[i]["main_T12_runtime_us"] for i in rejected], marker="x", color="tab:red", s=40, label="Ours: fails 1e-4 feasibility gate")
-        ax.set(title=network.upper(), ylabel="End-to-end communication time (us)", yscale="log")
+        ax.set(title=network.upper(), ylabel="End-to-end communication time (us)", yscale="linear", ylim=(0, None))
         ax.grid(axis="y", which="both", alpha=.2)
         ax.tick_params(axis="x", rotation=45, labelsize=8)
         ax.legend(fontsize=7)
@@ -175,7 +175,7 @@ def build_report(source, schedule, output):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
     notes = [
-        "端到端通信时间与计算耗时图的纵轴统一使用log坐标（底数10）。缺失项保留空值，B∞仍仅为带宽项。",
+        "端到端通信时间图的纵轴使用从零开始的线性坐标；算法计算耗时图的纵轴使用log坐标（底数10）。缺失项保留空值，B∞仍仅为带宽项。",
         f"默认端到端报告口径：每卡{REPORT_DEFAULTS['data_per_gpu_MB']:g} MB（十进制{REPORT_DEFAULTS['data_per_gpu_MB'] * REPORT_DEFAULTS['bytes_per_MB']:g} bytes），单位链路{REPORT_DEFAULTS['unit_link_Gbps']:g} Gbps，每活跃步启动开销{REPORT_DEFAULTS['alpha_us_per_active_step']:g} μs；原始M=N，故时间(μs)=objective×{bandwidth_us(1, 1):g}/N+{REPORT_DEFAULTS['alpha_us_per_active_step']:g}×活跃步数。活跃步按保存的A_t>0计数，空轮不收费；保留拓扑原有容量比例，例如HPN的4/1对应{4 * REPORT_DEFAULTS['unit_link_Gbps']:g}/{REPORT_DEFAULTS['unit_link_Gbps']:g} Gbps。",
         "图中隐藏2D，展示ForestColl的4D具体方案与我们的历史T12方案；仅在已有调度上换算，未针对新alpha重新优化。B∞虚线仅含带宽项，不是完整端到端时间。红叉标记main历史结果未通过原空间1e-4门槛，不能当作已验收的可执行方案。",
         "每例并列报告 B∞、T=2D 和 T=4D 的线性 objective；D 是固定森林最大单阶段 GPU 逻辑树深，交换机不另计层数。树、分片比例和物理路径固定；M=N、beta=1、alpha=0，HPN单向容量4/1。",
@@ -194,7 +194,7 @@ def build_report(source, schedule, output):
     metadata = {"generated_at": datetime.now(timezone.utc).isoformat(),
                 "report_source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                 "runtime_reference_sha256": runtime_reference_hash,
-                "time_axis_scale": "log",
+                "time_axis_scale": {"communication": "linear", "calculation": "log"},
                 "main_reference_revision": json.loads((HERE / "current_inputs.json").read_text())["source_revision"],
                 "source_label": Path(source).name, "schedule_label": Path(schedule).name,
                 "synthesis_complete": synthesis["complete"], "schedule_complete": queue["complete"],

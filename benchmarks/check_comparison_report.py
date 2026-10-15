@@ -81,7 +81,7 @@ class ReportChecks(unittest.TestCase):
 
 
 class RuntimeChecks(unittest.TestCase):
-    def test_runtime_figures_use_log_time_axes(self):
+    def test_runtime_figures_use_linear_time_axes(self):
         import matplotlib.pyplot as plt
         rows = [{"network": network, "num_gpus": 8, "failures": 0,
                  "forest_B_inf_bandwidth_us": 1, "forest_4D_runtime_us": 3,
@@ -90,7 +90,8 @@ class RuntimeChecks(unittest.TestCase):
         figure, axes = plt.subplots(1, 3)
         try:
             report.plot_runtime(axes, rows)
-            self.assertEqual([ax.get_yscale() for ax in axes], ["log"] * 3)
+            self.assertEqual([ax.get_yscale() for ax in axes], ["linear"] * 3)
+            self.assertEqual([ax.get_ylim()[0] for ax in axes], [0] * 3)
         finally:
             plt.close(figure)
 
