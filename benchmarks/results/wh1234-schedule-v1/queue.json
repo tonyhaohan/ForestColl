@@ -1,0 +1,693 @@
+{
+  "hostname": "test-X580-G30",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+  "started_at": "2026-10-15T04:27:49.505467+00:00",
+  "source_label": "wh1234-issue272-v1",
+  "horizon_policy": [
+    "12",
+    "2D",
+    "4D"
+  ],
+  "max_variables": 2000000,
+  "solve_limit_sec": 600,
+  "source_wait_limit_sec": 21600,
+  "source_sha256": {
+    "benchmarks/fixed_schedule.py": "598ba42931993d5d65ab1d4cce25928e43a4bcbf296bf299d84cfaf2162c7225",
+    "benchmarks/clos_benchmark.py": "c629ddca9780e060594891fa1541c472b1988d07789d8cb6b666f046d879c3c6",
+    "benchmarks/check_fixed_schedule.py": "8c421ffc2db4a50d0a5baf0392bbcdb9ee3ec9e770282b2ca6b6031a9130d33e",
+    "benchmarks/build_schedule_report.py": "eef89905ab42e1adc205f0ba14188040dd5f614e3ab2a2e7d22ce628e42fc4b6",
+    "benchmarks/run_schedule_matrix.py": "fe29058d8eef86fab2a7f3430e7100e289d93304a2da1a49f167a0a51988f6a7",
+    "benchmarks/current_inputs.json": "17b7f43040e5570a9d905b1b6da0ca2e1d82c2a2a2fe631a7267b80e3ea37093",
+    "benchmarks/vendor/mcnf_snapshot/__init__.py": "6596a5a11b99c6cfdadbfa6c7c5a594c0dcc9276d64c3af915838cba911b5c0f",
+    "benchmarks/vendor/mcnf_snapshot/collectives.py": "90ae98d43f1e4e479e59ce6d106147d07e489c5791bdabb548bf13e42d8fcea6",
+    "benchmarks/vendor/mcnf_snapshot/defaults.py": "33ae86709261a7e6d424bf7950d6313e328e865988456c15a8bcdc51436bb768",
+    "benchmarks/vendor/mcnf_snapshot/generation/__init__.py": "ea99945aa7e873e58c944b87a15bc0bc5d20663057ec2104520fdc5d93aa8500",
+    "benchmarks/vendor/mcnf_snapshot/generation/problem.py": "cad6ed6203a516ff7c5822ba15945f36936634c23943c4cd5cbc31473572ef07",
+    "benchmarks/vendor/mcnf_snapshot/generation/tasks.py": "83d9992582d5d78bd9241c72a4efa3cb92ae1ad21805123ff17f0e1b58d4138e",
+    "benchmarks/vendor/mcnf_snapshot/generation/topology.py": "6decfc7097ddca0fa7c06622041d3deddeaf6e9acb9b6506f4e4a464c6b629a5",
+    "benchmarks/vendor/mcnf_snapshot/linear_model.py": "64eeb6d71394df6f45878bbf175a3af9d3240be52b3d30f9673f2c20808f9d23",
+    "benchmarks/vendor/mcnf_snapshot/problem.py": "4069a9be8a67acc2668eebeeac8b7edbf878a03c77224276b1708a10e961941d",
+    "benchmarks/vendor/mcnf_snapshot/result_transfer.py": "bf3cdce930aa38e6fbb55684622d6b2c33d7b0fd42ac7f6b1e3b10bc507368e2",
+    "benchmarks/vendor/mcnf_snapshot/solver_factory/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "benchmarks/vendor/mcnf_snapshot/solver_factory/gpu_memory.py": "5adca9a3dd76c339723eadebc5784bf7964873ebce121f6f5c2c1d89e69ebf81",
+    "benchmarks/vendor/mcnf_snapshot/solver_factory/gurobi_native.py": "a7cf4618663ea82ed7c72e3b23a909d26e1759dd7f4a6a5dcd3b9e796240fd72",
+    "benchmarks/vendor/mcnf_snapshot/solver_factory/presolve_stats.py": "ca7637b5dd7d41afe558943e384d1c193c5ecceaa6cebe5b2ca188d39bd2d9b9"
+  },
+  "complete": true,
+  "status": "finished",
+  "pending_cases": [],
+  "rows": [
+    {
+      "case": "hpn64_f0",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.4725239188410342,
+      "result": "hpn64_f0/t12/result.json"
+    },
+    {
+      "case": "hpn64_f0",
+      "time_steps": 100,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 3.8335041836835444,
+      "result": "hpn64_f0/t100/result.json"
+    },
+    {
+      "case": "hpn64_f0",
+      "time_steps": 200,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 4.685194901656359,
+      "result": "hpn64_f0/t200/result.json"
+    },
+    {
+      "case": "hpn64_f1",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.4237732756882906,
+      "result": "hpn64_f1/t12/result.json"
+    },
+    {
+      "case": "hpn64_f1",
+      "time_steps": 44,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 144.99815648188815,
+      "result": "hpn64_f1/t44/result.json"
+    },
+    {
+      "case": "hpn64_f1",
+      "time_steps": 88,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 614.7528913659044,
+      "result": "hpn64_f1/t88/result.json"
+    },
+    {
+      "case": "hpn64_f2",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.323407697957009,
+      "result": "hpn64_f2/t12/result.json"
+    },
+    {
+      "case": "hpn64_f2",
+      "time_steps": 90,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 345.9505607946776,
+      "result": "hpn64_f2/t90/result.json"
+    },
+    {
+      "case": "hpn64_f2",
+      "time_steps": 180,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.5273119742050767,
+      "result": "hpn64_f2/t180/result.json"
+    },
+    {
+      "case": "closd64_f0",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.3749084691517055,
+      "result": "closd64_f0/t12/result.json"
+    },
+    {
+      "case": "closd64_f0",
+      "time_steps": 126,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.4774169926531613,
+      "result": "closd64_f0/t126/result.json"
+    },
+    {
+      "case": "closd64_f0",
+      "time_steps": 252,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.529226907994598,
+      "result": "closd64_f0/t252/result.json"
+    },
+    {
+      "case": "closd64_f1",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.3743164408951998,
+      "result": "closd64_f1/t12/result.json"
+    },
+    {
+      "case": "closd64_f1",
+      "time_steps": 126,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.5289636868983507,
+      "result": "closd64_f1/t126/result.json"
+    },
+    {
+      "case": "closd64_f1",
+      "time_steps": 252,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.5295990416780114,
+      "result": "closd64_f1/t252/result.json"
+    },
+    {
+      "case": "closd64_f2",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.3740699267946184,
+      "result": "closd64_f2/t12/result.json"
+    },
+    {
+      "case": "closd64_f2",
+      "time_steps": 126,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.4775710329413414,
+      "result": "closd64_f2/t126/result.json"
+    },
+    {
+      "case": "closd64_f2",
+      "time_steps": 252,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.579820762388408,
+      "result": "closd64_f2/t252/result.json"
+    },
+    {
+      "case": "ubd64_f0",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.6259726798161864,
+      "result": "ubd64_f0/t12/result.json"
+    },
+    {
+      "case": "ubd64_f0",
+      "time_steps": 44,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 5.941294807009399,
+      "result": "ubd64_f0/t44/result.json"
+    },
+    {
+      "case": "ubd64_f0",
+      "time_steps": 88,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 5.989526126068085,
+      "result": "ubd64_f0/t88/result.json"
+    },
+    {
+      "case": "ubd64_f1",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.4248484806157649,
+      "result": "ubd64_f1/t12/result.json"
+    },
+    {
+      "case": "ubd64_f1",
+      "time_steps": 24,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 103.14258441422135,
+      "result": "ubd64_f1/t24/result.json"
+    },
+    {
+      "case": "ubd64_f1",
+      "time_steps": 48,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.9290474746376276,
+      "result": "ubd64_f1/t48/result.json"
+    },
+    {
+      "case": "ubd64_f2",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.4257646473124623,
+      "result": "ubd64_f2/t12/result.json"
+    },
+    {
+      "case": "ubd64_f2",
+      "time_steps": 58,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 3.0312211620621383,
+      "result": "ubd64_f2/t58/result.json"
+    },
+    {
+      "case": "ubd64_f2",
+      "time_steps": 116,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 3.029736324213445,
+      "result": "ubd64_f2/t116/result.json"
+    },
+    {
+      "case": "hpn128_f0",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.725493195001036,
+      "result": "hpn128_f0/t12/result.json"
+    },
+    {
+      "case": "hpn128_f0",
+      "time_steps": 154,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 11.609717913903296,
+      "result": "hpn128_f0/t154/result.json"
+    },
+    {
+      "case": "hpn128_f0",
+      "time_steps": 308,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 12.36218839790672,
+      "result": "hpn128_f0/t308/result.json"
+    },
+    {
+      "case": "hpn128_f1",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.5770211601629853,
+      "result": "hpn128_f1/t12/result.json"
+    },
+    {
+      "case": "hpn128_f1",
+      "time_steps": 76,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 5.939186992123723,
+      "result": "hpn128_f1/t76/result.json"
+    },
+    {
+      "case": "hpn128_f1",
+      "time_steps": 152,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 6.242232089862227,
+      "result": "hpn128_f1/t152/result.json"
+    },
+    {
+      "case": "hpn128_f2",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.5251016980037093,
+      "result": "hpn128_f2/t12/result.json"
+    },
+    {
+      "case": "hpn128_f2",
+      "time_steps": 164,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 6.240865120198578,
+      "result": "hpn128_f2/t164/result.json"
+    },
+    {
+      "case": "hpn128_f2",
+      "time_steps": 328,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 6.694921305868775,
+      "result": "hpn128_f2/t328/result.json"
+    },
+    {
+      "case": "closd128_f0",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.526049790903926,
+      "result": "closd128_f0/t12/result.json"
+    },
+    {
+      "case": "closd128_f0",
+      "time_steps": 254,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 6.442909786012024,
+      "result": "closd128_f0/t254/result.json"
+    },
+    {
+      "case": "closd128_f0",
+      "time_steps": 508,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 6.995728220790625,
+      "result": "closd128_f0/t508/result.json"
+    },
+    {
+      "case": "closd128_f1",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.5755583918653429,
+      "result": "closd128_f1/t12/result.json"
+    },
+    {
+      "case": "closd128_f1",
+      "time_steps": 254,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 6.443199437111616,
+      "result": "closd128_f1/t254/result.json"
+    },
+    {
+      "case": "closd128_f1",
+      "time_steps": 508,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 7.1454434231854975,
+      "result": "closd128_f1/t508/result.json"
+    },
+    {
+      "case": "closd128_f2",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.574935127981007,
+      "result": "closd128_f2/t12/result.json"
+    },
+    {
+      "case": "closd128_f2",
+      "time_steps": 252,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 6.393406982999295,
+      "result": "closd128_f2/t252/result.json"
+    },
+    {
+      "case": "closd128_f2",
+      "time_steps": 504,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 7.044355581048876,
+      "result": "closd128_f2/t504/result.json"
+    },
+    {
+      "case": "ubd128_f0",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.5787808219902217,
+      "result": "ubd128_f0/t12/result.json"
+    },
+    {
+      "case": "ubd128_f0",
+      "time_steps": 70,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 34.79146418813616,
+      "result": "ubd128_f0/t70/result.json"
+    },
+    {
+      "case": "ubd128_f0",
+      "time_steps": 140,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 35.84256970277056,
+      "result": "ubd128_f0/t140/result.json"
+    },
+    {
+      "case": "ubd128_f1",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.5262795076705515,
+      "result": "ubd128_f1/t12/result.json"
+    },
+    {
+      "case": "ubd128_f1",
+      "time_steps": 26,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 5.489748592954129,
+      "result": "ubd128_f1/t26/result.json"
+    },
+    {
+      "case": "ubd128_f1",
+      "time_steps": 52,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 5.489559673704207,
+      "result": "ubd128_f1/t52/result.json"
+    },
+    {
+      "case": "ubd128_f2",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 1.5744291627779603,
+      "result": "ubd128_f2/t12/result.json"
+    },
+    {
+      "case": "ubd128_f2",
+      "time_steps": 38,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 5.489368475973606,
+      "result": "ubd128_f2/t38/result.json"
+    },
+    {
+      "case": "ubd128_f2",
+      "time_steps": 76,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 5.539347622077912,
+      "result": "ubd128_f2/t76/result.json"
+    },
+    {
+      "case": "hpn256_f0",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.1779910349287093,
+      "result": "hpn256_f0/t12/result.json"
+    },
+    {
+      "case": "hpn256_f0",
+      "time_steps": 208,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 21.84592613298446,
+      "result": "hpn256_f0/t208/result.json"
+    },
+    {
+      "case": "hpn256_f0",
+      "time_steps": 416,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 24.408912417013198,
+      "result": "hpn256_f0/t416/result.json"
+    },
+    {
+      "case": "hpn256_f1",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.178671484813094,
+      "result": "hpn256_f1/t12/result.json"
+    },
+    {
+      "case": "hpn256_f1",
+      "time_steps": 140,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 22.600058301817626,
+      "result": "hpn256_f1/t140/result.json"
+    },
+    {
+      "case": "hpn256_f1",
+      "time_steps": 280,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 23.053101025056094,
+      "result": "hpn256_f1/t280/result.json"
+    },
+    {
+      "case": "hpn256_f2",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.2282083090394735,
+      "result": "hpn256_f2/t12/result.json"
+    },
+    {
+      "case": "hpn256_f2",
+      "time_steps": 334,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 23.850184903945774,
+      "result": "hpn256_f2/t334/result.json"
+    },
+    {
+      "case": "hpn256_f2",
+      "time_steps": 668,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 25.761904946062714,
+      "result": "hpn256_f2/t668/result.json"
+    },
+    {
+      "case": "closd256_f0",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.178631392773241,
+      "result": "closd256_f0/t12/result.json"
+    },
+    {
+      "case": "closd256_f0",
+      "time_steps": 510,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 25.763837850186974,
+      "result": "closd256_f0/t510/result.json"
+    },
+    {
+      "case": "closd256_f0",
+      "time_steps": 1020,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 27.76677947025746,
+      "result": "closd256_f0/t1020/result.json"
+    },
+    {
+      "case": "closd256_f1",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.1757557820528746,
+      "result": "closd256_f1/t12/result.json"
+    },
+    {
+      "case": "closd256_f1",
+      "time_steps": 510,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 25.055293747689575,
+      "result": "closd256_f1/t510/result.json"
+    },
+    {
+      "case": "closd256_f1",
+      "time_steps": 1020,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 27.919859949033707,
+      "result": "closd256_f1/t1020/result.json"
+    },
+    {
+      "case": "closd256_f2",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.177151436917484,
+      "result": "closd256_f2/t12/result.json"
+    },
+    {
+      "case": "closd256_f2",
+      "time_steps": 510,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 25.714513312093914,
+      "result": "closd256_f2/t510/result.json"
+    },
+    {
+      "case": "closd256_f2",
+      "time_steps": 1020,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 27.669629455078393,
+      "result": "closd256_f2/t1020/result.json"
+    },
+    {
+      "case": "ubd256_f0",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 4.434817892033607,
+      "result": "ubd256_f0/t12/result.json"
+    },
+    {
+      "case": "ubd256_f0",
+      "time_steps": 98,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 87.94660929404199,
+      "result": "ubd256_f0/t98/result.json"
+    },
+    {
+      "case": "ubd256_f0",
+      "time_steps": 196,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 85.3431270942092,
+      "result": "ubd256_f0/t196/result.json"
+    },
+    {
+      "case": "ubd256_f1",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.228806965984404,
+      "result": "ubd256_f1/t12/result.json"
+    },
+    {
+      "case": "ubd256_f1",
+      "time_steps": 30,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 24.799432097934186,
+      "result": "ubd256_f1/t30/result.json"
+    },
+    {
+      "case": "ubd256_f1",
+      "time_steps": 60,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 23.75415209122002,
+      "result": "ubd256_f1/t60/result.json"
+    },
+    {
+      "case": "ubd256_f2",
+      "time_steps": 12,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 2.0284371240995824,
+      "result": "ubd256_f2/t12/result.json"
+    },
+    {
+      "case": "ubd256_f2",
+      "time_steps": 62,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 22.196486075874418,
+      "result": "ubd256_f2/t62/result.json"
+    },
+    {
+      "case": "ubd256_f2",
+      "time_steps": 124,
+      "exit_code": 0,
+      "error": null,
+      "process_wall_sec": 22.450115376152098,
+      "result": "ubd256_f2/t124/result.json"
+    }
+  ],
+  "last_report_sec": 0.6500611021183431,
+  "current_case": null,
+  "current_horizon": null,
+  "finished_at": "2026-10-15T05:31:30.922610+00:00"
+}

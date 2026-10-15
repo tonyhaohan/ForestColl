@@ -1,0 +1,1109 @@
+{
+  "case": "closd64_f2",
+  "hostname": "test-X580-G30",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+  "platform": "Linux-5.4.0-216-generic-x86_64-with-glibc2.31",
+  "time_steps": 12,
+  "source_trees_sha256": "f1fde45820853f31ef77c5f2a9eb2a623a7b9775095e4d2abbd60c3cd96711fc",
+  "source_input_sha256": "c4ba7b469046838382f65df2615a7ea69be1a8cfdecb9aafd25fb15a139fecf5",
+  "source_result_sha256": "b90fcfa3bb37a6c9234f04723671988ea51401b59a9d3a6ea2f09913047bdb77",
+  "forest": {
+    "tree_count": 64,
+    "max_depth": 63,
+    "min_depth": 17,
+    "allreduce_dependency_depth": 126,
+    "allgather_congestion_time": 63.0,
+    "rs_ag_congestion_time": 126.0,
+    "allreduce_fixed_forest_bandwidth_time": 126.0,
+    "capacity_excess": 0.0,
+    "validated": true
+  },
+  "reference": {
+    "network": "closd",
+    "num_gpus": 64,
+    "failure_count": 2,
+    "config": {
+      "network": {
+        "type": "closd",
+        "params": {
+          "gpu_groups": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ],
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ],
+            [
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ],
+            [
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55
+            ],
+            [
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ],
+            [
+              64,
+              65
+            ]
+          ],
+          "logical_gpu_groups": [
+            [
+              0,
+              1,
+              3,
+              4,
+              5,
+              6,
+              7,
+              65
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12,
+              14,
+              15,
+              64
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ],
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ],
+            [
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ],
+            [
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55
+            ],
+            [
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ]
+          ],
+          "gpus_per_node": 8,
+          "n_planes": 1,
+          "high_switches_per_plane": 1,
+          "gpu_low_bandwidth": 1.0,
+          "low_high_bandwidth": 1.0,
+          "scale_low_high_by_group_size": false
+        }
+      },
+      "task": {
+        "type": "allreduce",
+        "params": {
+          "group_size": 64,
+          "data_volume": 1.0
+        }
+      },
+      "comm": {
+        "name": "hwc"
+      },
+      "modeling": {
+        "family": "node_arc",
+        "params": {
+          "time_steps": 12,
+          "beta": 1.0
+        }
+      }
+    },
+    "failure_plan": {
+      "num_gpus": 64,
+      "replacements": [
+        {
+          "failed_gpu": 13,
+          "replacement_gpu": 64
+        },
+        {
+          "failed_gpu": 2,
+          "replacement_gpu": 65
+        }
+      ]
+    },
+    "graph": {
+      "compute_nodes": [
+        0,
+        1,
+        3,
+        4,
+        5,
+        6,
+        7,
+        65,
+        8,
+        9,
+        10,
+        11,
+        12,
+        14,
+        15,
+        64,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "edges": [
+        [
+          0,
+          66,
+          1.0
+        ],
+        [
+          66,
+          0,
+          1.0
+        ],
+        [
+          1,
+          66,
+          1.0
+        ],
+        [
+          66,
+          1,
+          1.0
+        ],
+        [
+          3,
+          66,
+          1.0
+        ],
+        [
+          66,
+          3,
+          1.0
+        ],
+        [
+          4,
+          66,
+          1.0
+        ],
+        [
+          66,
+          4,
+          1.0
+        ],
+        [
+          5,
+          66,
+          1.0
+        ],
+        [
+          66,
+          5,
+          1.0
+        ],
+        [
+          6,
+          66,
+          1.0
+        ],
+        [
+          66,
+          6,
+          1.0
+        ],
+        [
+          7,
+          66,
+          1.0
+        ],
+        [
+          66,
+          7,
+          1.0
+        ],
+        [
+          8,
+          67,
+          1.0
+        ],
+        [
+          67,
+          8,
+          1.0
+        ],
+        [
+          9,
+          67,
+          1.0
+        ],
+        [
+          67,
+          9,
+          1.0
+        ],
+        [
+          10,
+          67,
+          1.0
+        ],
+        [
+          67,
+          10,
+          1.0
+        ],
+        [
+          11,
+          67,
+          1.0
+        ],
+        [
+          67,
+          11,
+          1.0
+        ],
+        [
+          12,
+          67,
+          1.0
+        ],
+        [
+          67,
+          12,
+          1.0
+        ],
+        [
+          14,
+          67,
+          1.0
+        ],
+        [
+          67,
+          14,
+          1.0
+        ],
+        [
+          15,
+          67,
+          1.0
+        ],
+        [
+          67,
+          15,
+          1.0
+        ],
+        [
+          16,
+          68,
+          1.0
+        ],
+        [
+          68,
+          16,
+          1.0
+        ],
+        [
+          17,
+          68,
+          1.0
+        ],
+        [
+          68,
+          17,
+          1.0
+        ],
+        [
+          18,
+          68,
+          1.0
+        ],
+        [
+          68,
+          18,
+          1.0
+        ],
+        [
+          19,
+          68,
+          1.0
+        ],
+        [
+          68,
+          19,
+          1.0
+        ],
+        [
+          20,
+          68,
+          1.0
+        ],
+        [
+          68,
+          20,
+          1.0
+        ],
+        [
+          21,
+          68,
+          1.0
+        ],
+        [
+          68,
+          21,
+          1.0
+        ],
+        [
+          22,
+          68,
+          1.0
+        ],
+        [
+          68,
+          22,
+          1.0
+        ],
+        [
+          23,
+          68,
+          1.0
+        ],
+        [
+          68,
+          23,
+          1.0
+        ],
+        [
+          24,
+          69,
+          1.0
+        ],
+        [
+          69,
+          24,
+          1.0
+        ],
+        [
+          25,
+          69,
+          1.0
+        ],
+        [
+          69,
+          25,
+          1.0
+        ],
+        [
+          26,
+          69,
+          1.0
+        ],
+        [
+          69,
+          26,
+          1.0
+        ],
+        [
+          27,
+          69,
+          1.0
+        ],
+        [
+          69,
+          27,
+          1.0
+        ],
+        [
+          28,
+          69,
+          1.0
+        ],
+        [
+          69,
+          28,
+          1.0
+        ],
+        [
+          29,
+          69,
+          1.0
+        ],
+        [
+          69,
+          29,
+          1.0
+        ],
+        [
+          30,
+          69,
+          1.0
+        ],
+        [
+          69,
+          30,
+          1.0
+        ],
+        [
+          31,
+          69,
+          1.0
+        ],
+        [
+          69,
+          31,
+          1.0
+        ],
+        [
+          32,
+          70,
+          1.0
+        ],
+        [
+          70,
+          32,
+          1.0
+        ],
+        [
+          33,
+          70,
+          1.0
+        ],
+        [
+          70,
+          33,
+          1.0
+        ],
+        [
+          34,
+          70,
+          1.0
+        ],
+        [
+          70,
+          34,
+          1.0
+        ],
+        [
+          35,
+          70,
+          1.0
+        ],
+        [
+          70,
+          35,
+          1.0
+        ],
+        [
+          36,
+          70,
+          1.0
+        ],
+        [
+          70,
+          36,
+          1.0
+        ],
+        [
+          37,
+          70,
+          1.0
+        ],
+        [
+          70,
+          37,
+          1.0
+        ],
+        [
+          38,
+          70,
+          1.0
+        ],
+        [
+          70,
+          38,
+          1.0
+        ],
+        [
+          39,
+          70,
+          1.0
+        ],
+        [
+          70,
+          39,
+          1.0
+        ],
+        [
+          40,
+          71,
+          1.0
+        ],
+        [
+          71,
+          40,
+          1.0
+        ],
+        [
+          41,
+          71,
+          1.0
+        ],
+        [
+          71,
+          41,
+          1.0
+        ],
+        [
+          42,
+          71,
+          1.0
+        ],
+        [
+          71,
+          42,
+          1.0
+        ],
+        [
+          43,
+          71,
+          1.0
+        ],
+        [
+          71,
+          43,
+          1.0
+        ],
+        [
+          44,
+          71,
+          1.0
+        ],
+        [
+          71,
+          44,
+          1.0
+        ],
+        [
+          45,
+          71,
+          1.0
+        ],
+        [
+          71,
+          45,
+          1.0
+        ],
+        [
+          46,
+          71,
+          1.0
+        ],
+        [
+          71,
+          46,
+          1.0
+        ],
+        [
+          47,
+          71,
+          1.0
+        ],
+        [
+          71,
+          47,
+          1.0
+        ],
+        [
+          48,
+          72,
+          1.0
+        ],
+        [
+          72,
+          48,
+          1.0
+        ],
+        [
+          49,
+          72,
+          1.0
+        ],
+        [
+          72,
+          49,
+          1.0
+        ],
+        [
+          50,
+          72,
+          1.0
+        ],
+        [
+          72,
+          50,
+          1.0
+        ],
+        [
+          51,
+          72,
+          1.0
+        ],
+        [
+          72,
+          51,
+          1.0
+        ],
+        [
+          52,
+          72,
+          1.0
+        ],
+        [
+          72,
+          52,
+          1.0
+        ],
+        [
+          53,
+          72,
+          1.0
+        ],
+        [
+          72,
+          53,
+          1.0
+        ],
+        [
+          54,
+          72,
+          1.0
+        ],
+        [
+          72,
+          54,
+          1.0
+        ],
+        [
+          55,
+          72,
+          1.0
+        ],
+        [
+          72,
+          55,
+          1.0
+        ],
+        [
+          56,
+          73,
+          1.0
+        ],
+        [
+          73,
+          56,
+          1.0
+        ],
+        [
+          57,
+          73,
+          1.0
+        ],
+        [
+          73,
+          57,
+          1.0
+        ],
+        [
+          58,
+          73,
+          1.0
+        ],
+        [
+          73,
+          58,
+          1.0
+        ],
+        [
+          59,
+          73,
+          1.0
+        ],
+        [
+          73,
+          59,
+          1.0
+        ],
+        [
+          60,
+          73,
+          1.0
+        ],
+        [
+          73,
+          60,
+          1.0
+        ],
+        [
+          61,
+          73,
+          1.0
+        ],
+        [
+          73,
+          61,
+          1.0
+        ],
+        [
+          62,
+          73,
+          1.0
+        ],
+        [
+          73,
+          62,
+          1.0
+        ],
+        [
+          63,
+          73,
+          1.0
+        ],
+        [
+          73,
+          63,
+          1.0
+        ],
+        [
+          64,
+          74,
+          1.0
+        ],
+        [
+          74,
+          64,
+          1.0
+        ],
+        [
+          65,
+          74,
+          1.0
+        ],
+        [
+          74,
+          65,
+          1.0
+        ],
+        [
+          66,
+          75,
+          1.0
+        ],
+        [
+          75,
+          66,
+          1.0
+        ],
+        [
+          67,
+          75,
+          1.0
+        ],
+        [
+          75,
+          67,
+          1.0
+        ],
+        [
+          68,
+          75,
+          1.0
+        ],
+        [
+          75,
+          68,
+          1.0
+        ],
+        [
+          69,
+          75,
+          1.0
+        ],
+        [
+          75,
+          69,
+          1.0
+        ],
+        [
+          70,
+          75,
+          1.0
+        ],
+        [
+          75,
+          70,
+          1.0
+        ],
+        [
+          71,
+          75,
+          1.0
+        ],
+        [
+          75,
+          71,
+          1.0
+        ],
+        [
+          72,
+          75,
+          1.0
+        ],
+        [
+          75,
+          72,
+          1.0
+        ],
+        [
+          73,
+          75,
+          1.0
+        ],
+        [
+          75,
+          73,
+          1.0
+        ],
+        [
+          74,
+          75,
+          1.0
+        ],
+        [
+          75,
+          74,
+          1.0
+        ]
+      ]
+    },
+    "objective": 125.99999307517896,
+    "raw_status": "optimal_inaccurate",
+    "max_violation": 1.6735424921421327e-06,
+    "standard_feasible": true,
+    "mcnf": {
+      "case": "closd64_f2_t12",
+      "network": "closd",
+      "num_gpus": 64,
+      "failures": 2,
+      "cg_lower_bound": 125.99999999989578,
+      "cg_objective": 126.0000000000104,
+      "cg_status": "optimal",
+      "cg_converged": true,
+      "cg_max_violation": 7.573300753876966e-11,
+      "cg_solve_seconds": 38.318442854098976,
+      "cg_peak_rss_mib": 502.36328125,
+      "fixed_lower_bound": 126.00000000019456,
+      "fixed_status": "optimal",
+      "fixed_max_violation": 6.633971150193929e-10,
+      "t12_objective": 125.99999307517896,
+      "t12_status": "optimal_inaccurate",
+      "t12_raw_objective": 125.99999307517896,
+      "t12_objective_multiplier": 1.0,
+      "t12_max_violation": 1.6735424921421327e-06,
+      "t12_feasible_1e4": true,
+      "fixed_source": "docs/experiment_results/issue252_constant_flow/standard/results/closd64_f2_constant_flow.json",
+      "t12_source": "docs/experiment_results/issue242_standard_failure/closd_t12_main_only.json",
+      "cg_source": "docs/experiment_results/issue252_constant_flow_cg_standard_2h/results/closd64_f2_cg.json",
+      "t12_over_fixed_gap_percent": -5.4960441198126375e-06,
+      "t12_over_cg_gap_percent": -5.495806998379038e-06,
+      "cg_gap_percent": 9.097202708953166e-11,
+      "compact_status": "optimal",
+      "compact_objective": 126.00000000003197,
+      "compact_lower_bound": 126.00000000003197,
+      "compact_max_violation": 3.6074254694540286e-11,
+      "compact_converged": true,
+      "compact_model_build_seconds": 2.567124143242836,
+      "compact_seconds": 10.171650369185954,
+      "compact_peak_rss_mib": 863.6953125,
+      "compact_model_size": {
+        "variables": 541889,
+        "constraints": 542485,
+        "nonzeros": 2149970
+      },
+      "compact_source": "docs/experiment_results/issue252_constant_flow_compact_standard_2h/results/closd64_f2_compact.json",
+      "compact_vs_cg": "\u6700\u4f18\u503c\u4e00\u81f4",
+      "t12_over_compact_gap_percent": -5.495915089692716e-06,
+      "fixed_over_compact_gap_percent": 1.290301199219357e-10
+    },
+    "mcnf_t12_timings": {
+      "problem_build_wall_time_sec": 0.8508676380151883,
+      "model_build_wall_time_sec": 1.3304601470008492,
+      "main_wall_time_sec": 64.02526908100117,
+      "stage_artifact_wall_time_sec": 1.6287085600197315e-05,
+      "node_arc_model_build_time_sec": 1.1945887029869482,
+      "data_model_wall_time_sec": 25.27910340903327,
+      "papilo_presolve_time_sec": 19.84004897,
+      "cuopt_gpu_solve_time_sec": 37.618504406069405,
+      "papilo_postsolve_time_sec": 0.9376048209378496,
+      "worker_wall_time_sec": 66.86534165393095,
+      "row_wall_time_sec": 70.45047343301121
+    },
+    "config_source": "docs/experiment_results/issue252_constant_flow/standard/configs/closd64_f2_constant_flow.json",
+    "config_source_sha256": "d6de558760c224d469b4209d78f99f712e103c89a1129a5c3561b7fca1c20b8d",
+    "t12_source_sha256": "5efdb4cd95e9249109e68447ca3d394a934296796bfb5a634ae5dfcd9dde26c0"
+  },
+  "timings": {
+    "input_validation_sec": 0.06073382589966059,
+    "case_wall_sec": 0.06953937280923128
+  },
+  "minimum_paired_horizon": 126,
+  "status": "infeasible_fixed_paired_depth",
+  "peak_rss_mib": 140.5078125,
+  "validated": false,
+  "reason": "Positive fixed shard on deepest paired tree needs reduce depth + broadcast depth; no pruning or reweighting"
+}

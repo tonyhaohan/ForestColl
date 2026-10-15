@@ -6,6 +6,15 @@
 
 **Note:** The large-scale schedule generation experiments presented in the paper were conducted using the parallelized implementation provided in the `parallel` directory.
 
+## MCNF ClosD / UBD / HPN benchmark fork
+
+This fork includes 27 validated ClosD/UBD/HPN cases (64/128/256 GPUs, with 0/1/2 GPU failures and replacements), fixed-forest communication schedules and per-stage WH1234 timings. The default end-to-end report uses 0.25 MB per GPU, 400 Gbps per unit link and 0.1 us per active step, with logarithmic time axes. B_inf remains a bandwidth-only reference; finite schedules and historical MCNF feasibility flags are reported separately. Upstream algorithm files are unchanged.
+
+- [Current report](benchmarks/results/wh1234-comparison-v2/comparison.html) (open locally) / [end-to-end chart](benchmarks/results/wh1234-comparison-v2/end_to_end.png)
+- [CSV](benchmarks/results/wh1234-comparison-v2/comparison.csv) / [JSON and provenance](benchmarks/results/wh1234-comparison-v2/comparison.json)
+- [Scope and reproduction instructions](benchmarks/README.md)
+- [Historical local ClosD/UBD results](benchmarks/depth_bandwidth.md)
+
 ## Compute Optimal Algorithmic Bandwidth
 
 Compute the optimal allgather/reduce-scatter [algorithmic bandwidth](https://github.com/NVIDIA/nccl-tests/blob/master/doc/PERFORMANCE.md#algorithm-bandwidth) given a network topology. The optimal allgather/reduce-scatter runtime is given by 

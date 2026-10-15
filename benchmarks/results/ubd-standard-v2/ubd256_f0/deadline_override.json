@@ -1,0 +1,10 @@
+{
+  "waiter_pid": 98456,
+  "worker_pid": 98504,
+  "original_limit_seconds": 3600,
+  "effective_limit_seconds": 5400,
+  "worker_elapsed_at_extension_seconds": 3120,
+  "method": "Suspend only the Python timeout waiter; Java worker continues unchanged; always resume waiter.",
+  "resume_reason": "Java worker exited",
+  "waiter_resumed": true
+}

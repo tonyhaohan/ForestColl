@@ -1,0 +1,24 @@
+{
+  "forest_base_revision": "6bba33abda0c300e8eba086feb6d0cb0900419d9",
+  "branch": "codex/mcnf-issue272-forestcoll-hpn",
+  "files": {
+    "benchmarks/evaluate_pruned.py": "da5f582ee632b862b1f1588c798291a0ca07ce4277eb434f1fef8fd15d63b5af",
+    "benchmarks/finite_sweep.py": "1d56eee0e97aab2fe39b9abd195db90306b86bfe4cfaf9c594004fcdf345088f",
+    "benchmarks/export_mcnf_inputs.py": "a72d83dfdaa210593c95c4bd40030574d1a341ed86cf1c1271aa17f8ae61b098",
+    "benchmarks/clos_benchmark.py": "c629ddca9780e060594891fa1541c472b1988d07789d8cb6b666f046d879c3c6",
+    "benchmarks/build_depth_report.py": "0b6592a001595ff23bda2b16101caea136396fba63a2ce42d40ab05dc5d5584b",
+    "benchmarks/build_wh1234_report.py": "582504d74509c9569856de30071470a84af185cd9175ae89e6a95e067e1dacf6",
+    "benchmarks/check_clos.py": "b2a286a3d7b8c1a29ec32bb7a15f6e392c65bc67afe66fc0eb8dfaf6d2659c7e",
+    "benchmarks/build_report.py": "f26b5791fd0f2f36b5c38f7a20bfb575e9cf8337f283940c1abdfb55719ee311",
+    "benchmarks/setup_java.py": "38c0bdfdafaa49e5960a4959f24b0394240b0b24717a5922e0eb7fcb6b098b13",
+    "benchmarks/run_matrix.py": "dbf3f07b70ee3c216c3a1a1d36a79ab9e72c7b5f796ba4af4c4cf26930e32b19",
+    "benchmarks/ClosBenchmark.java": "8d82cf3f70b56412e9b932295294e61f0602b0aeed504a25c9d6dcfb49577aa7",
+    "benchmarks/current_inputs.json": "17b7f43040e5570a9d905b1b6da0ca2e1d82c2a2a2fe631a7267b80e3ea37093",
+    "parallel/src/BranchingGenerator.java": "4e4f34dfee79fe4df13d044ede6c3bca13dfeab607bda5cbd9f9b5c6402cd9b3",
+    "parallel/src/EdgeSplittingParallel.java": "10ade39272c9b75ba47cf518c40b88ab7962ac11e4a27ce694468e3f85b012e1",
+    "parallel/src/EdgeSplitting.java": "6c34f9082470f09b6de4975aa85035a4b2921eb6e9da1b597a7ec7c212ca2fd6",
+    "parallel/src/BinarySearchParallel.java": "0630cf5d3a6df9eaef1d484b5b98d248e47fa1a86c8edfed73a04cde9d1161cc",
+    "parallel/src/Main.java": "0e4990fce9db1d8e91729a596be094bdfa428fe19850c76abdcbe81d898d7cc5"
+  },
+  "scope": "Local delivery sources after launch; queue.json hashes identify the measured workers"
+}

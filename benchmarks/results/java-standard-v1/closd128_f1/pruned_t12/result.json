@@ -1,0 +1,7 @@
+{
+  "retained_out_trees": 0,
+  "original_out_trees": 128,
+  "method": "ForestColl candidates + MCNF depth filter + free LP weights",
+  "status": "no_tree_after_depth_filter",
+  "horizon": 12
+}

@@ -1,0 +1,283 @@
+{
+  "n": 16,
+  "failure_count": 2,
+  "failure_plan": {
+    "num_gpus": 16,
+    "replacements": [
+      {
+        "failed_gpu": 3,
+        "replacement_gpu": 16
+      },
+      {
+        "failed_gpu": 0,
+        "replacement_gpu": 17
+      }
+    ]
+  },
+  "config": {
+    "network": {
+      "type": "closd",
+      "params": {
+        "gpu_groups": [
+          [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7
+          ],
+          [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          [
+            16,
+            17
+          ]
+        ],
+        "logical_gpu_groups": [
+          [
+            1,
+            2,
+            4,
+            5,
+            6,
+            7,
+            16,
+            17
+          ],
+          [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ]
+        ],
+        "gpus_per_node": 8,
+        "n_planes": 1,
+        "high_switches_per_plane": 1,
+        "gpu_low_bandwidth": 1.0,
+        "low_high_bandwidth": 1.0,
+        "scale_low_high_by_group_size": false
+      }
+    },
+    "task": {
+      "type": "allreduce",
+      "params": {
+        "group_size": 16,
+        "data_volume": 1.0
+      }
+    },
+    "comm": {
+      "name": "hwc"
+    },
+    "modeling": {
+      "family": "node_arc",
+      "params": {
+        "time_steps": 12,
+        "beta": 1.0
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.8 | packaged by conda-forge | (main, Dec  5 2024, 08:43:59) [Clang 18.1.8 ]",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "networkx": "3.6.1"
+  },
+  "input_sha256": "618cb2ddf0405f66cdbab78ac90231d32c647f3cfbbdc57f941d9b9c43fde82d",
+  "reference": null,
+  "forest": {
+    "U": 15.0,
+    "k": 1,
+    "search_sec": 0.012718208,
+    "allgather_optimum_time": 15.0,
+    "rs_ag_optimum_time": 30.0,
+    "algorithmic_bandwidth": 1.0666666666666667,
+    "backend": "java-parallel",
+    "java_wall_sec": 0.24148629100091057,
+    "java_peak_rss_mib": 110.296875,
+    "split_sec": 0.098420958,
+    "branch_sec": 0.039167334,
+    "mapback_sec": 0.0006569170000148006,
+    "tree_count": 16,
+    "max_depth": 15,
+    "min_depth": 7,
+    "allgather_congestion_time": 15.0,
+    "rs_ag_congestion_time": 30.0,
+    "capacity_excess": 0.0,
+    "validated": true
+  },
+  "wall_sec": 0.26192883400653955,
+  "peak_rss_mib": 131.765625,
+  "barrier_schedule": {
+    "rounds": 30,
+    "time": 98.0,
+    "steps": [
+      {
+        "phase": "reduce",
+        "level": 0,
+        "duration": 3.0
+      },
+      {
+        "phase": "reduce",
+        "level": 1,
+        "duration": 3.0
+      },
+      {
+        "phase": "reduce",
+        "level": 2,
+        "duration": 4.0
+      },
+      {
+        "phase": "reduce",
+        "level": 3,
+        "duration": 6.0
+      },
+      {
+        "phase": "reduce",
+        "level": 4,
+        "duration": 6.0
+      },
+      {
+        "phase": "reduce",
+        "level": 5,
+        "duration": 9.0
+      },
+      {
+        "phase": "reduce",
+        "level": 6,
+        "duration": 9.0
+      },
+      {
+        "phase": "reduce",
+        "level": 7,
+        "duration": 3.0
+      },
+      {
+        "phase": "reduce",
+        "level": 8,
+        "duration": 4.0
+      },
+      {
+        "phase": "reduce",
+        "level": 9,
+        "duration": 3.0
+      },
+      {
+        "phase": "reduce",
+        "level": 10,
+        "duration": 2.0
+      },
+      {
+        "phase": "reduce",
+        "level": 11,
+        "duration": 2.0
+      },
+      {
+        "phase": "reduce",
+        "level": 12,
+        "duration": 2.0
+      },
+      {
+        "phase": "reduce",
+        "level": 13,
+        "duration": 3.0
+      },
+      {
+        "phase": "reduce",
+        "level": 14,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 0,
+        "duration": 5.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 1,
+        "duration": 4.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 2,
+        "duration": 3.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 3,
+        "duration": 4.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 4,
+        "duration": 3.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 5,
+        "duration": 4.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 6,
+        "duration": 3.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 7,
+        "duration": 3.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 8,
+        "duration": 3.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 9,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 10,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 11,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 12,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 13,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 14,
+        "duration": 1.0
+      }
+    ]
+  },
+  "forest_t12": {
+    "status": "infeasible_fixed_forest_depth",
+    "horizon": 12
+  }
+}

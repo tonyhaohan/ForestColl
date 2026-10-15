@@ -1,0 +1,19 @@
+{
+  "retained_out_trees": 14,
+  "original_out_trees": 16,
+  "method": "ForestColl candidates + MCNF depth filter + free LP weights",
+  "status": "optimal",
+  "objective": 224.00000003691787,
+  "horizon": 12,
+  "build_sec": 0.004579125001328066,
+  "solve_sec": 0.016221334000874776,
+  "wall_sec": 0.024571916997956578,
+  "variables": 10920,
+  "violations": {
+    "eq": 8.881784197001252e-16,
+    "ineq": 0.0,
+    "lower_bounds": 0.0,
+    "upper_bounds": 0.0
+  },
+  "validated": true
+}

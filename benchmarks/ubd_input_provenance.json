@@ -1,0 +1,26 @@
+{
+  "archive_source": "docs/experiment_results/issue237_ubd_t12/source_manifest.json",
+  "archive_base_commit": "6dbea21359f762868033edceed581766340e3941",
+  "source_agreement": {
+    "src/mcnf_tree/generation/topology.py": {
+      "archived_sha256": "6decfc7097ddca0fa7c06622041d3deddeaf6e9acb9b6506f4e4a464c6b629a5",
+      "current_sha256": "6decfc7097ddca0fa7c06622041d3deddeaf6e9acb9b6506f4e4a464c6b629a5"
+    },
+    "src/mcnf_tree/generation/tasks.py": {
+      "archived_sha256": "83d9992582d5d78bd9241c72a4efa3cb92ae1ad21805123ff17f0e1b58d4138e",
+      "current_sha256": "83d9992582d5d78bd9241c72a4efa3cb92ae1ad21805123ff17f0e1b58d4138e"
+    },
+    "src/mcnf_tree/collectives.py": {
+      "archived_sha256": "90ae98d43f1e4e479e59ce6d106147d07e489c5791bdabb548bf13e42d8fcea6",
+      "current_sha256": "90ae98d43f1e4e479e59ce6d106147d07e489c5791bdabb548bf13e42d8fcea6"
+    },
+    "src/mcnf_tree/problem.py": {
+      "archived_sha256": "4069a9be8a67acc2668eebeeac8b7edbf878a03c77224276b1708a10e961941d",
+      "current_sha256": "4069a9be8a67acc2668eebeeac8b7edbf878a03c77224276b1708a10e961941d"
+    },
+    "src/mcnf_tree/linear_model.py": {
+      "archived_sha256": "64eeb6d71394df6f45878bbf175a3af9d3240be52b3d30f9673f2c20808f9d23",
+      "current_sha256": "64eeb6d71394df6f45878bbf175a3af9d3240be52b3d30f9673f2c20808f9d23"
+    }
+  }
+}

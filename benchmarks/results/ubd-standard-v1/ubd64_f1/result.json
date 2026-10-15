@@ -1,0 +1,445 @@
+{
+  "network": "ubd",
+  "n": 64,
+  "failure_count": 1,
+  "failure_plan": {
+    "num_gpus": 64,
+    "replacements": [
+      {
+        "failed_gpu": 13,
+        "replacement_gpu": 69
+      }
+    ]
+  },
+  "config": {
+    "network": {
+      "type": "ubd",
+      "params": {
+        "rack_x": 4,
+        "rack_y": 4,
+        "pod_x": 2,
+        "pod_y": 2,
+        "n_pod": 1,
+        "extra_gpus": 0,
+        "failed_gpus": [
+          13
+        ],
+        "use_rack_backup": [
+          0
+        ],
+        "logical_gpu_groups": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            69,
+            14,
+            15
+          ],
+          [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ]
+        ],
+        "bandwidth_inrack": 1.0,
+        "bandwidth_uprack": 4.0,
+        "bandwidth_backup": 4.0,
+        "bandwidth_inpod": 32.0,
+        "bandwidth_uppod": 64.0
+      }
+    },
+    "task": {
+      "type": "allreduce",
+      "params": {
+        "group_size": 64,
+        "data_volume": 1.0
+      }
+    },
+    "comm": {
+      "name": "hwc"
+    },
+    "modeling": {
+      "family": "node_arc",
+      "params": {
+        "time_steps": 12,
+        "beta": 1.0
+      }
+    }
+  },
+  "environment": {
+    "python": "3.12.8 | packaged by conda-forge | (main, Dec  5 2024, 08:43:59) [Clang 18.1.8 ]",
+    "platform": "macOS-27.0-arm64-arm-64bit",
+    "networkx": "3.6.1"
+  },
+  "input_sha256": "6c286e255e69ce09e21a00e10308291b6851543d03a3d9c8d867a2c482ec001c",
+  "reference": {
+    "name": "ubd64_f1_t12",
+    "num_gpus": 64,
+    "failure_count": 1,
+    "failure_plan": {
+      "num_gpus": 64,
+      "replacements": [
+        {
+          "failed_gpu": 13,
+          "replacement_gpu": 69
+        }
+      ]
+    },
+    "config": {
+      "network": {
+        "type": "ubd",
+        "params": {
+          "rack_x": 4,
+          "rack_y": 4,
+          "pod_x": 2,
+          "pod_y": 2,
+          "n_pod": 1,
+          "extra_gpus": 0,
+          "failed_gpus": [
+            13
+          ],
+          "use_rack_backup": [
+            0
+          ],
+          "logical_gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              69,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ],
+            [
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ]
+          ],
+          "bandwidth_inrack": 1.0,
+          "bandwidth_uprack": 4.0,
+          "bandwidth_backup": 4.0,
+          "bandwidth_inpod": 32.0,
+          "bandwidth_uppod": 64.0
+        }
+      },
+      "task": {
+        "type": "allreduce",
+        "params": {
+          "group_size": 64,
+          "data_volume": 1.0
+        }
+      },
+      "comm": {
+        "name": "hwc"
+      },
+      "modeling": {
+        "family": "node_arc",
+        "params": {
+          "time_steps": 12,
+          "beta": 1.0
+        }
+      }
+    },
+    "objective": 17.409329904420844,
+    "A": [
+      1.2434918301060902,
+      1.4921524187311785,
+      1.49212504967833,
+      1.4921255010519205,
+      1.4921793173348834,
+      1.4922407681421355,
+      1.492266712274071,
+      1.4922756864762772,
+      1.4923041656573404,
+      1.4923207856504452,
+      1.4922981616254516,
+      1.2435495076927203
+    ],
+    "raw_status": "optimal_inaccurate",
+    "max_violation": 8.090524967282325e-05,
+    "standard_feasible": true,
+    "original_violations": {
+      "eq": 4.401486596972148e-06,
+      "ineq": 8.090524967282325e-05,
+      "lower_bounds": 6.206023264176963e-07,
+      "upper_bounds": 0.0
+    },
+    "timings": {
+      "main_wall_time_sec": 36.21666421100963,
+      "stage_artifact_wall_time_sec": 2.325500827282667e-05,
+      "worker_wall_time_sec": 38.643426194030326
+    },
+    "source_sha256": "038e6f511c794744b26b69fc373f9317a5414dcbea14c70deca4fd3fbfe873a9"
+  },
+  "forest": {
+    "U": 63.0,
+    "k": 4,
+    "search_sec": 0.112245666,
+    "allgather_optimum_time": 15.75,
+    "rs_ag_sequential_bandwidth_time": 31.5,
+    "algorithmic_bandwidth": 4.063492063492063,
+    "backend": "java-parallel",
+    "java_wall_sec": 1.728324583003996,
+    "java_peak_rss_mib": 429.6875,
+    "split_sec": 0.736740917,
+    "branch_sec": 0.670236041,
+    "mapback_sec": 0.006651791998592671,
+    "tree_count": 112,
+    "max_depth": 12,
+    "min_depth": 5,
+    "allreduce_dependency_depth": 24,
+    "allgather_congestion_time": 15.75,
+    "rs_ag_congestion_time": 31.5,
+    "allreduce_fixed_forest_bandwidth_time": 31.5,
+    "capacity_excess": 0.0,
+    "validated": true
+  },
+  "wall_sec": 2.5837835000056657,
+  "peak_rss_mib": 138.15625,
+  "barrier_schedule": {
+    "rounds": 24,
+    "time": 145.25,
+    "steps": [
+      {
+        "phase": "reduce",
+        "level": 0,
+        "duration": 11.0
+      },
+      {
+        "phase": "reduce",
+        "level": 1,
+        "duration": 7.0
+      },
+      {
+        "phase": "reduce",
+        "level": 2,
+        "duration": 10.25
+      },
+      {
+        "phase": "reduce",
+        "level": 3,
+        "duration": 13.5
+      },
+      {
+        "phase": "reduce",
+        "level": 4,
+        "duration": 7.1875
+      },
+      {
+        "phase": "reduce",
+        "level": 5,
+        "duration": 8.5
+      },
+      {
+        "phase": "reduce",
+        "level": 6,
+        "duration": 6.5625
+      },
+      {
+        "phase": "reduce",
+        "level": 7,
+        "duration": 5.625
+      },
+      {
+        "phase": "reduce",
+        "level": 8,
+        "duration": 4.0
+      },
+      {
+        "phase": "reduce",
+        "level": 9,
+        "duration": 2.75
+      },
+      {
+        "phase": "reduce",
+        "level": 10,
+        "duration": 1.0
+      },
+      {
+        "phase": "reduce",
+        "level": 11,
+        "duration": 0.25
+      },
+      {
+        "phase": "broadcast",
+        "level": 0,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 1,
+        "duration": 4.375
+      },
+      {
+        "phase": "broadcast",
+        "level": 2,
+        "duration": 8.25
+      },
+      {
+        "phase": "broadcast",
+        "level": 3,
+        "duration": 8.75
+      },
+      {
+        "phase": "broadcast",
+        "level": 4,
+        "duration": 7.75
+      },
+      {
+        "phase": "broadcast",
+        "level": 5,
+        "duration": 9.5
+      },
+      {
+        "phase": "broadcast",
+        "level": 6,
+        "duration": 9.75
+      },
+      {
+        "phase": "broadcast",
+        "level": 7,
+        "duration": 6.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 8,
+        "duration": 6.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 9,
+        "duration": 4.25
+      },
+      {
+        "phase": "broadcast",
+        "level": 10,
+        "duration": 1.75
+      },
+      {
+        "phase": "broadcast",
+        "level": 11,
+        "duration": 0.25
+      }
+    ]
+  }
+}
