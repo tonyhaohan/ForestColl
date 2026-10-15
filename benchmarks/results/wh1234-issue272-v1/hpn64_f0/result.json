@@ -1,0 +1,2355 @@
+{
+  "network": "hpn",
+  "n": 64,
+  "failure_count": 0,
+  "failure_plan": {
+    "num_gpus": 64,
+    "spare_nodes": 0,
+    "replacements": []
+  },
+  "config": {
+    "network": {
+      "type": "hpn",
+      "params": {
+        "n_nodes": 8,
+        "gpu_groups": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          [
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          [
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ]
+        ],
+        "logical_gpu_groups": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          [
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23
+          ],
+          [
+            24,
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31
+          ],
+          [
+            32,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39
+          ],
+          [
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ],
+          [
+            48,
+            49,
+            50,
+            51,
+            52,
+            53,
+            54,
+            55
+          ],
+          [
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62,
+            63
+          ]
+        ],
+        "bandwidth_intra_host": 4.0,
+        "bandwidth_inter_host": 1.0
+      }
+    },
+    "task": {
+      "type": "allreduce",
+      "params": {
+        "group_size": 64,
+        "data_volume": 1.0
+      }
+    },
+    "comm": {
+      "name": "hwc"
+    },
+    "modeling": {
+      "family": "node_arc",
+      "params": {
+        "time_steps": 12,
+        "beta": 1.0
+      }
+    }
+  },
+  "environment": {
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+    "platform": "Linux-5.4.0-216-generic-x86_64-with-glibc2.31",
+    "networkx": "3.5",
+    "hostname": "test-X580-G30"
+  },
+  "inputs_sha256": "17b7f43040e5570a9d905b1b6da0ca2e1d82c2a2a2fe631a7267b80e3ea37093",
+  "input_sha256": "fedd4e5f1a2960a44ada7ffe7eba0957df3ecbd960b75e84163807a650bd59d6",
+  "reference": {
+    "network": "hpn",
+    "num_gpus": 64,
+    "failure_count": 0,
+    "config": {
+      "network": {
+        "type": "hpn",
+        "params": {
+          "n_nodes": 8,
+          "gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ],
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ],
+            [
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ],
+            [
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55
+            ],
+            [
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ]
+          ],
+          "logical_gpu_groups": [
+            [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ],
+            [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ],
+            [
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ],
+            [
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55
+            ],
+            [
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ]
+          ],
+          "bandwidth_intra_host": 4.0,
+          "bandwidth_inter_host": 1.0
+        }
+      },
+      "task": {
+        "type": "allreduce",
+        "params": {
+          "group_size": 64,
+          "data_volume": 1.0
+        }
+      },
+      "comm": {
+        "name": "hwc"
+      },
+      "modeling": {
+        "family": "node_arc",
+        "params": {
+          "time_steps": 12,
+          "beta": 1.0
+        }
+      }
+    },
+    "failure_plan": {
+      "num_gpus": 64,
+      "spare_nodes": 0,
+      "replacements": []
+    },
+    "graph": {
+      "compute_nodes": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63
+      ],
+      "edges": [
+        [
+          0,
+          64,
+          4.0
+        ],
+        [
+          64,
+          0,
+          4.0
+        ],
+        [
+          0,
+          72,
+          1.0
+        ],
+        [
+          72,
+          0,
+          1.0
+        ],
+        [
+          1,
+          64,
+          4.0
+        ],
+        [
+          64,
+          1,
+          4.0
+        ],
+        [
+          1,
+          73,
+          1.0
+        ],
+        [
+          73,
+          1,
+          1.0
+        ],
+        [
+          2,
+          64,
+          4.0
+        ],
+        [
+          64,
+          2,
+          4.0
+        ],
+        [
+          2,
+          74,
+          1.0
+        ],
+        [
+          74,
+          2,
+          1.0
+        ],
+        [
+          3,
+          64,
+          4.0
+        ],
+        [
+          64,
+          3,
+          4.0
+        ],
+        [
+          3,
+          75,
+          1.0
+        ],
+        [
+          75,
+          3,
+          1.0
+        ],
+        [
+          4,
+          64,
+          4.0
+        ],
+        [
+          64,
+          4,
+          4.0
+        ],
+        [
+          4,
+          76,
+          1.0
+        ],
+        [
+          76,
+          4,
+          1.0
+        ],
+        [
+          5,
+          64,
+          4.0
+        ],
+        [
+          64,
+          5,
+          4.0
+        ],
+        [
+          5,
+          77,
+          1.0
+        ],
+        [
+          77,
+          5,
+          1.0
+        ],
+        [
+          6,
+          64,
+          4.0
+        ],
+        [
+          64,
+          6,
+          4.0
+        ],
+        [
+          6,
+          78,
+          1.0
+        ],
+        [
+          78,
+          6,
+          1.0
+        ],
+        [
+          7,
+          64,
+          4.0
+        ],
+        [
+          64,
+          7,
+          4.0
+        ],
+        [
+          7,
+          79,
+          1.0
+        ],
+        [
+          79,
+          7,
+          1.0
+        ],
+        [
+          8,
+          65,
+          4.0
+        ],
+        [
+          65,
+          8,
+          4.0
+        ],
+        [
+          8,
+          72,
+          1.0
+        ],
+        [
+          72,
+          8,
+          1.0
+        ],
+        [
+          9,
+          65,
+          4.0
+        ],
+        [
+          65,
+          9,
+          4.0
+        ],
+        [
+          9,
+          73,
+          1.0
+        ],
+        [
+          73,
+          9,
+          1.0
+        ],
+        [
+          10,
+          65,
+          4.0
+        ],
+        [
+          65,
+          10,
+          4.0
+        ],
+        [
+          10,
+          74,
+          1.0
+        ],
+        [
+          74,
+          10,
+          1.0
+        ],
+        [
+          11,
+          65,
+          4.0
+        ],
+        [
+          65,
+          11,
+          4.0
+        ],
+        [
+          11,
+          75,
+          1.0
+        ],
+        [
+          75,
+          11,
+          1.0
+        ],
+        [
+          12,
+          65,
+          4.0
+        ],
+        [
+          65,
+          12,
+          4.0
+        ],
+        [
+          12,
+          76,
+          1.0
+        ],
+        [
+          76,
+          12,
+          1.0
+        ],
+        [
+          13,
+          65,
+          4.0
+        ],
+        [
+          65,
+          13,
+          4.0
+        ],
+        [
+          13,
+          77,
+          1.0
+        ],
+        [
+          77,
+          13,
+          1.0
+        ],
+        [
+          14,
+          65,
+          4.0
+        ],
+        [
+          65,
+          14,
+          4.0
+        ],
+        [
+          14,
+          78,
+          1.0
+        ],
+        [
+          78,
+          14,
+          1.0
+        ],
+        [
+          15,
+          65,
+          4.0
+        ],
+        [
+          65,
+          15,
+          4.0
+        ],
+        [
+          15,
+          79,
+          1.0
+        ],
+        [
+          79,
+          15,
+          1.0
+        ],
+        [
+          16,
+          66,
+          4.0
+        ],
+        [
+          66,
+          16,
+          4.0
+        ],
+        [
+          16,
+          72,
+          1.0
+        ],
+        [
+          72,
+          16,
+          1.0
+        ],
+        [
+          17,
+          66,
+          4.0
+        ],
+        [
+          66,
+          17,
+          4.0
+        ],
+        [
+          17,
+          73,
+          1.0
+        ],
+        [
+          73,
+          17,
+          1.0
+        ],
+        [
+          18,
+          66,
+          4.0
+        ],
+        [
+          66,
+          18,
+          4.0
+        ],
+        [
+          18,
+          74,
+          1.0
+        ],
+        [
+          74,
+          18,
+          1.0
+        ],
+        [
+          19,
+          66,
+          4.0
+        ],
+        [
+          66,
+          19,
+          4.0
+        ],
+        [
+          19,
+          75,
+          1.0
+        ],
+        [
+          75,
+          19,
+          1.0
+        ],
+        [
+          20,
+          66,
+          4.0
+        ],
+        [
+          66,
+          20,
+          4.0
+        ],
+        [
+          20,
+          76,
+          1.0
+        ],
+        [
+          76,
+          20,
+          1.0
+        ],
+        [
+          21,
+          66,
+          4.0
+        ],
+        [
+          66,
+          21,
+          4.0
+        ],
+        [
+          21,
+          77,
+          1.0
+        ],
+        [
+          77,
+          21,
+          1.0
+        ],
+        [
+          22,
+          66,
+          4.0
+        ],
+        [
+          66,
+          22,
+          4.0
+        ],
+        [
+          22,
+          78,
+          1.0
+        ],
+        [
+          78,
+          22,
+          1.0
+        ],
+        [
+          23,
+          66,
+          4.0
+        ],
+        [
+          66,
+          23,
+          4.0
+        ],
+        [
+          23,
+          79,
+          1.0
+        ],
+        [
+          79,
+          23,
+          1.0
+        ],
+        [
+          24,
+          67,
+          4.0
+        ],
+        [
+          67,
+          24,
+          4.0
+        ],
+        [
+          24,
+          72,
+          1.0
+        ],
+        [
+          72,
+          24,
+          1.0
+        ],
+        [
+          25,
+          67,
+          4.0
+        ],
+        [
+          67,
+          25,
+          4.0
+        ],
+        [
+          25,
+          73,
+          1.0
+        ],
+        [
+          73,
+          25,
+          1.0
+        ],
+        [
+          26,
+          67,
+          4.0
+        ],
+        [
+          67,
+          26,
+          4.0
+        ],
+        [
+          26,
+          74,
+          1.0
+        ],
+        [
+          74,
+          26,
+          1.0
+        ],
+        [
+          27,
+          67,
+          4.0
+        ],
+        [
+          67,
+          27,
+          4.0
+        ],
+        [
+          27,
+          75,
+          1.0
+        ],
+        [
+          75,
+          27,
+          1.0
+        ],
+        [
+          28,
+          67,
+          4.0
+        ],
+        [
+          67,
+          28,
+          4.0
+        ],
+        [
+          28,
+          76,
+          1.0
+        ],
+        [
+          76,
+          28,
+          1.0
+        ],
+        [
+          29,
+          67,
+          4.0
+        ],
+        [
+          67,
+          29,
+          4.0
+        ],
+        [
+          29,
+          77,
+          1.0
+        ],
+        [
+          77,
+          29,
+          1.0
+        ],
+        [
+          30,
+          67,
+          4.0
+        ],
+        [
+          67,
+          30,
+          4.0
+        ],
+        [
+          30,
+          78,
+          1.0
+        ],
+        [
+          78,
+          30,
+          1.0
+        ],
+        [
+          31,
+          67,
+          4.0
+        ],
+        [
+          67,
+          31,
+          4.0
+        ],
+        [
+          31,
+          79,
+          1.0
+        ],
+        [
+          79,
+          31,
+          1.0
+        ],
+        [
+          32,
+          68,
+          4.0
+        ],
+        [
+          68,
+          32,
+          4.0
+        ],
+        [
+          32,
+          72,
+          1.0
+        ],
+        [
+          72,
+          32,
+          1.0
+        ],
+        [
+          33,
+          68,
+          4.0
+        ],
+        [
+          68,
+          33,
+          4.0
+        ],
+        [
+          33,
+          73,
+          1.0
+        ],
+        [
+          73,
+          33,
+          1.0
+        ],
+        [
+          34,
+          68,
+          4.0
+        ],
+        [
+          68,
+          34,
+          4.0
+        ],
+        [
+          34,
+          74,
+          1.0
+        ],
+        [
+          74,
+          34,
+          1.0
+        ],
+        [
+          35,
+          68,
+          4.0
+        ],
+        [
+          68,
+          35,
+          4.0
+        ],
+        [
+          35,
+          75,
+          1.0
+        ],
+        [
+          75,
+          35,
+          1.0
+        ],
+        [
+          36,
+          68,
+          4.0
+        ],
+        [
+          68,
+          36,
+          4.0
+        ],
+        [
+          36,
+          76,
+          1.0
+        ],
+        [
+          76,
+          36,
+          1.0
+        ],
+        [
+          37,
+          68,
+          4.0
+        ],
+        [
+          68,
+          37,
+          4.0
+        ],
+        [
+          37,
+          77,
+          1.0
+        ],
+        [
+          77,
+          37,
+          1.0
+        ],
+        [
+          38,
+          68,
+          4.0
+        ],
+        [
+          68,
+          38,
+          4.0
+        ],
+        [
+          38,
+          78,
+          1.0
+        ],
+        [
+          78,
+          38,
+          1.0
+        ],
+        [
+          39,
+          68,
+          4.0
+        ],
+        [
+          68,
+          39,
+          4.0
+        ],
+        [
+          39,
+          79,
+          1.0
+        ],
+        [
+          79,
+          39,
+          1.0
+        ],
+        [
+          40,
+          69,
+          4.0
+        ],
+        [
+          69,
+          40,
+          4.0
+        ],
+        [
+          40,
+          72,
+          1.0
+        ],
+        [
+          72,
+          40,
+          1.0
+        ],
+        [
+          41,
+          69,
+          4.0
+        ],
+        [
+          69,
+          41,
+          4.0
+        ],
+        [
+          41,
+          73,
+          1.0
+        ],
+        [
+          73,
+          41,
+          1.0
+        ],
+        [
+          42,
+          69,
+          4.0
+        ],
+        [
+          69,
+          42,
+          4.0
+        ],
+        [
+          42,
+          74,
+          1.0
+        ],
+        [
+          74,
+          42,
+          1.0
+        ],
+        [
+          43,
+          69,
+          4.0
+        ],
+        [
+          69,
+          43,
+          4.0
+        ],
+        [
+          43,
+          75,
+          1.0
+        ],
+        [
+          75,
+          43,
+          1.0
+        ],
+        [
+          44,
+          69,
+          4.0
+        ],
+        [
+          69,
+          44,
+          4.0
+        ],
+        [
+          44,
+          76,
+          1.0
+        ],
+        [
+          76,
+          44,
+          1.0
+        ],
+        [
+          45,
+          69,
+          4.0
+        ],
+        [
+          69,
+          45,
+          4.0
+        ],
+        [
+          45,
+          77,
+          1.0
+        ],
+        [
+          77,
+          45,
+          1.0
+        ],
+        [
+          46,
+          69,
+          4.0
+        ],
+        [
+          69,
+          46,
+          4.0
+        ],
+        [
+          46,
+          78,
+          1.0
+        ],
+        [
+          78,
+          46,
+          1.0
+        ],
+        [
+          47,
+          69,
+          4.0
+        ],
+        [
+          69,
+          47,
+          4.0
+        ],
+        [
+          47,
+          79,
+          1.0
+        ],
+        [
+          79,
+          47,
+          1.0
+        ],
+        [
+          48,
+          70,
+          4.0
+        ],
+        [
+          70,
+          48,
+          4.0
+        ],
+        [
+          48,
+          72,
+          1.0
+        ],
+        [
+          72,
+          48,
+          1.0
+        ],
+        [
+          49,
+          70,
+          4.0
+        ],
+        [
+          70,
+          49,
+          4.0
+        ],
+        [
+          49,
+          73,
+          1.0
+        ],
+        [
+          73,
+          49,
+          1.0
+        ],
+        [
+          50,
+          70,
+          4.0
+        ],
+        [
+          70,
+          50,
+          4.0
+        ],
+        [
+          50,
+          74,
+          1.0
+        ],
+        [
+          74,
+          50,
+          1.0
+        ],
+        [
+          51,
+          70,
+          4.0
+        ],
+        [
+          70,
+          51,
+          4.0
+        ],
+        [
+          51,
+          75,
+          1.0
+        ],
+        [
+          75,
+          51,
+          1.0
+        ],
+        [
+          52,
+          70,
+          4.0
+        ],
+        [
+          70,
+          52,
+          4.0
+        ],
+        [
+          52,
+          76,
+          1.0
+        ],
+        [
+          76,
+          52,
+          1.0
+        ],
+        [
+          53,
+          70,
+          4.0
+        ],
+        [
+          70,
+          53,
+          4.0
+        ],
+        [
+          53,
+          77,
+          1.0
+        ],
+        [
+          77,
+          53,
+          1.0
+        ],
+        [
+          54,
+          70,
+          4.0
+        ],
+        [
+          70,
+          54,
+          4.0
+        ],
+        [
+          54,
+          78,
+          1.0
+        ],
+        [
+          78,
+          54,
+          1.0
+        ],
+        [
+          55,
+          70,
+          4.0
+        ],
+        [
+          70,
+          55,
+          4.0
+        ],
+        [
+          55,
+          79,
+          1.0
+        ],
+        [
+          79,
+          55,
+          1.0
+        ],
+        [
+          56,
+          71,
+          4.0
+        ],
+        [
+          71,
+          56,
+          4.0
+        ],
+        [
+          56,
+          72,
+          1.0
+        ],
+        [
+          72,
+          56,
+          1.0
+        ],
+        [
+          57,
+          71,
+          4.0
+        ],
+        [
+          71,
+          57,
+          4.0
+        ],
+        [
+          57,
+          73,
+          1.0
+        ],
+        [
+          73,
+          57,
+          1.0
+        ],
+        [
+          58,
+          71,
+          4.0
+        ],
+        [
+          71,
+          58,
+          4.0
+        ],
+        [
+          58,
+          74,
+          1.0
+        ],
+        [
+          74,
+          58,
+          1.0
+        ],
+        [
+          59,
+          71,
+          4.0
+        ],
+        [
+          71,
+          59,
+          4.0
+        ],
+        [
+          59,
+          75,
+          1.0
+        ],
+        [
+          75,
+          59,
+          1.0
+        ],
+        [
+          60,
+          71,
+          4.0
+        ],
+        [
+          71,
+          60,
+          4.0
+        ],
+        [
+          60,
+          76,
+          1.0
+        ],
+        [
+          76,
+          60,
+          1.0
+        ],
+        [
+          61,
+          71,
+          4.0
+        ],
+        [
+          71,
+          61,
+          4.0
+        ],
+        [
+          61,
+          77,
+          1.0
+        ],
+        [
+          77,
+          61,
+          1.0
+        ],
+        [
+          62,
+          71,
+          4.0
+        ],
+        [
+          71,
+          62,
+          4.0
+        ],
+        [
+          62,
+          78,
+          1.0
+        ],
+        [
+          78,
+          62,
+          1.0
+        ],
+        [
+          63,
+          71,
+          4.0
+        ],
+        [
+          71,
+          63,
+          4.0
+        ],
+        [
+          63,
+          79,
+          1.0
+        ],
+        [
+          79,
+          63,
+          1.0
+        ]
+      ]
+    },
+    "objective": 27.999999779405275,
+    "raw_status": "optimal",
+    "max_violation": 2.0950225736299927e-05,
+    "standard_feasible": true,
+    "mcnf": {
+      "case": "hpn64_f0_t12",
+      "network": "hpn",
+      "num_gpus": 64,
+      "failures": 0,
+      "cg_lower_bound": null,
+      "cg_objective": null,
+      "cg_status": "not_run",
+      "cg_converged": false,
+      "cg_max_violation": null,
+      "cg_solve_seconds": null,
+      "cg_peak_rss_mib": null,
+      "fixed_lower_bound": 28.000000000150294,
+      "fixed_status": "optimal",
+      "fixed_max_violation": 7.105427357601002e-14,
+      "t12_objective": 27.999999779405275,
+      "t12_status": "optimal",
+      "t12_raw_objective": 0.5599999955881055,
+      "t12_objective_multiplier": 50.0,
+      "t12_max_violation": 2.0950225736299927e-05,
+      "t12_feasible_1e4": true,
+      "fixed_source": "docs/experiment_results/issue252_constant_flow/hpn/results/hpn64_f0_constant_flow.json",
+      "t12_source": "docs/experiment_results/issue250_hpn_standard_bw4/results/hpn64_f0_t12.json",
+      "cg_source": null,
+      "t12_over_fixed_gap_percent": -7.8837506523044e-07,
+      "t12_over_cg_gap_percent": null,
+      "cg_gap_percent": null,
+      "compact_status": "optimal",
+      "compact_objective": 25.199999999999996,
+      "compact_lower_bound": 25.199999999999996,
+      "compact_max_violation": 1.7053025658242404e-13,
+      "compact_converged": true,
+      "compact_model_build_seconds": 2.6541815199889243,
+      "compact_seconds": 5.650751864071935,
+      "compact_peak_rss_mib": 868.76171875,
+      "compact_model_size": {
+        "variables": 548929,
+        "constraints": 543363,
+        "nonzeros": 2171200
+      },
+      "compact_source": "docs/experiment_results/issue252_constant_flow_compact_hpn_2h/results/hpn64_f0_compact.json",
+      "compact_vs_cg": "\u672a\u8fd0\u884cCG",
+      "t12_over_compact_gap_percent": 11.111110235735232,
+      "fixed_over_compact_gap_percent": 11.111111111707528
+    },
+    "mcnf_t12_timings": {
+      "problem_build_wall_time_sec": 0.8503819960169494,
+      "model_build_wall_time_sec": 1.0162270930595696,
+      "main_wall_time_sec": 20.81367571116425,
+      "stage_artifact_wall_time_sec": 1.818290911614895e-05,
+      "worker_wall_time_sec": 23.154015433974564
+    },
+    "config_source": "docs/experiment_results/issue252_constant_flow/hpn/configs/hpn64_f0_constant_flow.json",
+    "config_source_sha256": "2fa0462c37f7edf97dde8d5a8fd0f4776ec3c3da252c55881f8e29215ba5ebc9",
+    "t12_source_sha256": "d54e47a8dde416439a258151c1c5369c5962e1db0ee5e39b5f57b4b52db99f00"
+  },
+  "input_build_sec": 0.04116468410938978,
+  "forest": {
+    "U": 63.0,
+    "k": 5,
+    "search_sec": 0.228029749,
+    "allgather_optimum_time": 12.6,
+    "rs_ag_sequential_bandwidth_time": 25.2,
+    "algorithmic_bandwidth": 5.079365079365079,
+    "backend": "java-parallel",
+    "java_timeout_sec": 7200,
+    "java_wall_sec": 6.187548364978284,
+    "java_peak_rss_mib": 1339.5390625,
+    "split_sec": 2.542734002,
+    "branch_sec": 3.124683662,
+    "mapback_sec": 0.05583105655387044,
+    "tree_count": 130,
+    "max_depth": 50,
+    "min_depth": 9,
+    "allreduce_dependency_depth": 100,
+    "allgather_congestion_time": 12.6,
+    "rs_ag_congestion_time": 25.2,
+    "allreduce_fixed_forest_bandwidth_time": 25.2,
+    "capacity_excess": 0.0,
+    "validated": true
+  },
+  "python_bound_check_sec": 1.820468201301992,
+  "wall_sec": 8.288235289976,
+  "peak_rss_mib": 147.2421875,
+  "validation_sec": 0.07308013271540403,
+  "barrier_schedule": {
+    "rounds": 100,
+    "time": 232.1,
+    "steps": [
+      {
+        "phase": "reduce",
+        "level": 0,
+        "duration": 3.1999999999999993
+      },
+      {
+        "phase": "reduce",
+        "level": 1,
+        "duration": 3.1999999999999993
+      },
+      {
+        "phase": "reduce",
+        "level": 2,
+        "duration": 7.3999999999999995
+      },
+      {
+        "phase": "reduce",
+        "level": 3,
+        "duration": 5.0
+      },
+      {
+        "phase": "reduce",
+        "level": 4,
+        "duration": 7.6
+      },
+      {
+        "phase": "reduce",
+        "level": 5,
+        "duration": 10.2
+      },
+      {
+        "phase": "reduce",
+        "level": 6,
+        "duration": 10.399999999999999
+      },
+      {
+        "phase": "reduce",
+        "level": 7,
+        "duration": 5.3999999999999995
+      },
+      {
+        "phase": "reduce",
+        "level": 8,
+        "duration": 5.6
+      },
+      {
+        "phase": "reduce",
+        "level": 9,
+        "duration": 7.0
+      },
+      {
+        "phase": "reduce",
+        "level": 10,
+        "duration": 4.4
+      },
+      {
+        "phase": "reduce",
+        "level": 11,
+        "duration": 9.6
+      },
+      {
+        "phase": "reduce",
+        "level": 12,
+        "duration": 5.1999999999999975
+      },
+      {
+        "phase": "reduce",
+        "level": 13,
+        "duration": 10.399999999999997
+      },
+      {
+        "phase": "reduce",
+        "level": 14,
+        "duration": 6.3999999999999995
+      },
+      {
+        "phase": "reduce",
+        "level": 15,
+        "duration": 3.4000000000000004
+      },
+      {
+        "phase": "reduce",
+        "level": 16,
+        "duration": 4.6
+      },
+      {
+        "phase": "reduce",
+        "level": 17,
+        "duration": 2.5999999999999996
+      },
+      {
+        "phase": "reduce",
+        "level": 18,
+        "duration": 2.1999999999999997
+      },
+      {
+        "phase": "reduce",
+        "level": 19,
+        "duration": 4.199999999999999
+      },
+      {
+        "phase": "reduce",
+        "level": 20,
+        "duration": 8.0
+      },
+      {
+        "phase": "reduce",
+        "level": 21,
+        "duration": 2.2499999999999996
+      },
+      {
+        "phase": "reduce",
+        "level": 22,
+        "duration": 3.1499999999999995
+      },
+      {
+        "phase": "reduce",
+        "level": 23,
+        "duration": 4.0
+      },
+      {
+        "phase": "reduce",
+        "level": 24,
+        "duration": 2.2
+      },
+      {
+        "phase": "reduce",
+        "level": 25,
+        "duration": 1.9999999999999998
+      },
+      {
+        "phase": "reduce",
+        "level": 26,
+        "duration": 1.4
+      },
+      {
+        "phase": "reduce",
+        "level": 27,
+        "duration": 2.4000000000000004
+      },
+      {
+        "phase": "reduce",
+        "level": 28,
+        "duration": 3.8000000000000003
+      },
+      {
+        "phase": "reduce",
+        "level": 29,
+        "duration": 1.05
+      },
+      {
+        "phase": "reduce",
+        "level": 30,
+        "duration": 0.8
+      },
+      {
+        "phase": "reduce",
+        "level": 31,
+        "duration": 0.8
+      },
+      {
+        "phase": "reduce",
+        "level": 32,
+        "duration": 0.6000000000000001
+      },
+      {
+        "phase": "reduce",
+        "level": 33,
+        "duration": 1.1
+      },
+      {
+        "phase": "reduce",
+        "level": 34,
+        "duration": 2.2
+      },
+      {
+        "phase": "reduce",
+        "level": 35,
+        "duration": 0.55
+      },
+      {
+        "phase": "reduce",
+        "level": 36,
+        "duration": 1.0
+      },
+      {
+        "phase": "reduce",
+        "level": 37,
+        "duration": 0.45
+      },
+      {
+        "phase": "reduce",
+        "level": 38,
+        "duration": 0.6
+      },
+      {
+        "phase": "reduce",
+        "level": 39,
+        "duration": 0.45
+      },
+      {
+        "phase": "reduce",
+        "level": 40,
+        "duration": 0.9
+      },
+      {
+        "phase": "reduce",
+        "level": 41,
+        "duration": 1.8
+      },
+      {
+        "phase": "reduce",
+        "level": 42,
+        "duration": 0.5
+      },
+      {
+        "phase": "reduce",
+        "level": 43,
+        "duration": 1.2000000000000002
+      },
+      {
+        "phase": "reduce",
+        "level": 44,
+        "duration": 0.8
+      },
+      {
+        "phase": "reduce",
+        "level": 45,
+        "duration": 0.6
+      },
+      {
+        "phase": "reduce",
+        "level": 46,
+        "duration": 0.1
+      },
+      {
+        "phase": "reduce",
+        "level": 47,
+        "duration": 0.2
+      },
+      {
+        "phase": "reduce",
+        "level": 48,
+        "duration": 0.4
+      },
+      {
+        "phase": "reduce",
+        "level": 49,
+        "duration": 0.1
+      },
+      {
+        "phase": "broadcast",
+        "level": 0,
+        "duration": 2.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 1,
+        "duration": 3.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 2,
+        "duration": 3.4000000000000004
+      },
+      {
+        "phase": "broadcast",
+        "level": 3,
+        "duration": 4.4
+      },
+      {
+        "phase": "broadcast",
+        "level": 4,
+        "duration": 4.2
+      },
+      {
+        "phase": "broadcast",
+        "level": 5,
+        "duration": 3.4000000000000004
+      },
+      {
+        "phase": "broadcast",
+        "level": 6,
+        "duration": 3.0000000000000004
+      },
+      {
+        "phase": "broadcast",
+        "level": 7,
+        "duration": 3.8000000000000003
+      },
+      {
+        "phase": "broadcast",
+        "level": 8,
+        "duration": 3.2
+      },
+      {
+        "phase": "broadcast",
+        "level": 9,
+        "duration": 2.8000000000000003
+      },
+      {
+        "phase": "broadcast",
+        "level": 10,
+        "duration": 2.2
+      },
+      {
+        "phase": "broadcast",
+        "level": 11,
+        "duration": 1.8000000000000003
+      },
+      {
+        "phase": "broadcast",
+        "level": 12,
+        "duration": 2.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 13,
+        "duration": 1.8
+      },
+      {
+        "phase": "broadcast",
+        "level": 14,
+        "duration": 1.4
+      },
+      {
+        "phase": "broadcast",
+        "level": 15,
+        "duration": 1.7999999999999998
+      },
+      {
+        "phase": "broadcast",
+        "level": 16,
+        "duration": 1.2000000000000002
+      },
+      {
+        "phase": "broadcast",
+        "level": 17,
+        "duration": 0.8
+      },
+      {
+        "phase": "broadcast",
+        "level": 18,
+        "duration": 1.8000000000000003
+      },
+      {
+        "phase": "broadcast",
+        "level": 19,
+        "duration": 1.2000000000000002
+      },
+      {
+        "phase": "broadcast",
+        "level": 20,
+        "duration": 1.6
+      },
+      {
+        "phase": "broadcast",
+        "level": 21,
+        "duration": 1.4
+      },
+      {
+        "phase": "broadcast",
+        "level": 22,
+        "duration": 1.2000000000000002
+      },
+      {
+        "phase": "broadcast",
+        "level": 23,
+        "duration": 1.2000000000000002
+      },
+      {
+        "phase": "broadcast",
+        "level": 24,
+        "duration": 0.6
+      },
+      {
+        "phase": "broadcast",
+        "level": 25,
+        "duration": 1.4
+      },
+      {
+        "phase": "broadcast",
+        "level": 26,
+        "duration": 0.8
+      },
+      {
+        "phase": "broadcast",
+        "level": 27,
+        "duration": 0.4
+      },
+      {
+        "phase": "broadcast",
+        "level": 28,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 29,
+        "duration": 0.5
+      },
+      {
+        "phase": "broadcast",
+        "level": 30,
+        "duration": 0.6
+      },
+      {
+        "phase": "broadcast",
+        "level": 31,
+        "duration": 0.4
+      },
+      {
+        "phase": "broadcast",
+        "level": 32,
+        "duration": 0.8
+      },
+      {
+        "phase": "broadcast",
+        "level": 33,
+        "duration": 0.4
+      },
+      {
+        "phase": "broadcast",
+        "level": 34,
+        "duration": 0.6
+      },
+      {
+        "phase": "broadcast",
+        "level": 35,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 36,
+        "duration": 0.5
+      },
+      {
+        "phase": "broadcast",
+        "level": 37,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 38,
+        "duration": 0.3
+      },
+      {
+        "phase": "broadcast",
+        "level": 39,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 40,
+        "duration": 0.4
+      },
+      {
+        "phase": "broadcast",
+        "level": 41,
+        "duration": 1.0
+      },
+      {
+        "phase": "broadcast",
+        "level": 42,
+        "duration": 0.25
+      },
+      {
+        "phase": "broadcast",
+        "level": 43,
+        "duration": 0.4
+      },
+      {
+        "phase": "broadcast",
+        "level": 44,
+        "duration": 0.2
+      },
+      {
+        "phase": "broadcast",
+        "level": 45,
+        "duration": 0.15
+      },
+      {
+        "phase": "broadcast",
+        "level": 46,
+        "duration": 0.1
+      },
+      {
+        "phase": "broadcast",
+        "level": 47,
+        "duration": 0.1
+      },
+      {
+        "phase": "broadcast",
+        "level": 48,
+        "duration": 0.1
+      },
+      {
+        "phase": "broadcast",
+        "level": 49,
+        "duration": 0.1
+      }
+    ]
+  },
+  "barrier_schedule_sec": 0.07145426515489817
+}

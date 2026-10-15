@@ -1,4 +1,4 @@
-"""ForestColl on frozen MCNF ClosD/UBD inputs. Run in conda math."""
+"""ForestColl on frozen/current MCNF physical graphs. Run in conda math."""
 from __future__ import annotations
 
 import argparse
@@ -10,6 +10,7 @@ from pathlib import Path
 import platform
 import random
 import resource
+import socket
 import subprocess
 import sys
 import time
@@ -28,11 +29,17 @@ from mcnf_snapshot.linear_model import NodeArcLinearTemplate
 from mcnf_snapshot.solver_factory.gurobi_native import solve_with_gurobi_native
 
 
-def case(n, failure, network="closd"):
+def case(n, failure, network="closd", inputs=None):
     if n < 16 or n % 8 or failure not in (0, 1, 2):
         raise ValueError("Require N >= 16, N divisible by 8, failure in 0/1/2")
+    if inputs:
+        archive = json.loads(Path(inputs).read_text())
+        for row in archive["rows"]:
+            if (row["network"], row["num_gpus"], row["failure_count"]) == (network, n, failure):
+                return row["config"], row["failure_plan"], row
+        raise ValueError("Case missing from exported canonical inputs")
     if network not in ("closd", "ubd"):
-        raise ValueError("network must be closd or ubd")
+        raise ValueError("HPN requires --inputs from export_mcnf_inputs.py")
     archive = json.loads((HERE / ("ubd_reference.json" if network == "ubd" else "reference.json")).read_text())
     for row in archive["rows"]:
         if (row["num_gpus"], row["failure_count"]) == (n, failure):
@@ -63,10 +70,16 @@ def case(n, failure, network="closd"):
 
 
 def graph_from_topology(topology):
+    return graph_from_data({"compute_nodes": topology.gpu_nodes, "edges": [
+        [u, v, c] for (u, v), c in zip(topology.edges, topology.bandwidths)]})
+
+
+def graph_from_data(data):
     graph = nx.DiGraph()
     # num_nodes includes failed GPU ID holes; never resurrect them as switches.
-    graph.add_nodes_from(topology.gpu_nodes)
-    for (u, v), capacity in zip(topology.edges, topology.bandwidths):
+    graph.add_nodes_from(data["compute_nodes"])
+    for u, v, capacity in data["edges"]:
+        assert np.isfinite(capacity) and capacity > 0
         graph.add_edge(int(u), int(v), capacity=float(capacity))
     assert nx.is_strongly_connected(graph)
     assert all(graph[v][u]["capacity"] == d["capacity"] for u, v, d in graph.edges(data=True))
@@ -219,27 +232,37 @@ def finite_solve(problem, horizon, out, weights=None, limit=180):
 
 
 def run(args):
-    config, failure, reference = case(args.n, args.failure, args.network)
+    start = time.perf_counter()
+    config, failure, reference = case(args.n, args.failure, args.network, args.inputs)
     if args.network != "closd" and args.finite:
         raise ValueError("Finite LP replay currently requires unique ClosD physical paths")
+    if args.network == "hpn" and args.baseline:
+        raise ValueError("HPN MCNF comparison uses exported evidence; the old model snapshot has no HPN")
     out = HERE / "results" / args.label / f"{args.network}{args.n}_f{args.failure}"
     out.mkdir(parents=True, exist_ok=False)
-    start = time.perf_counter()
-    topology = create_topology(config["network"]["type"], config["network"]["params"])
-    graph = graph_from_topology(topology)
-    graph_data = {"compute_nodes": list(topology.gpu_nodes),
+    if args.inputs:
+        graph = graph_from_data(reference["graph"])
+        gpus = tuple(reference["graph"]["compute_nodes"])
+    else:
+        topology = create_topology(config["network"]["type"], config["network"]["params"])
+        graph = graph_from_topology(topology)
+        gpus = topology.gpu_nodes
+    graph_data = {"compute_nodes": list(gpus),
                   "edges": [[u, v, d["capacity"]] for u, v, d in graph.edges(data=True)]}
     result = {"network": args.network, "n": args.n, "failure_count": args.failure, "failure_plan": failure,
               "config": config, "environment": {"python": sys.version, "platform": platform.platform(),
-              "networkx": nx.__version__}, "input_sha256": hashlib.sha256(json.dumps(graph_data, sort_keys=True).encode()).hexdigest(),
+              "networkx": nx.__version__, "hostname": socket.gethostname()},
+              "inputs_sha256": hashlib.sha256(Path(args.inputs).read_bytes()).hexdigest() if args.inputs else None,
+              "input_sha256": hashlib.sha256(json.dumps(graph_data, sort_keys=True).encode()).hexdigest(),
               "reference": reference}
+    result["input_build_sec"] = time.perf_counter() - start
     (out / "input.json").write_text(json.dumps(graph_data, indent=2) + "\n")
     def save():
         result["wall_sec"] = time.perf_counter() - start
         result["peak_rss_mib"] = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / (1024**2 if sys.platform == "darwin" else 1024)
         (out / "result.json").write_text(json.dumps(result, indent=2) + "\n")
     scaled, scale = scale_to_integer_capacities(graph)
-    algo = OptimalBranchingsAlgo(scaled, capacitated=True, compute_nodes=topology.gpu_nodes)
+    algo = OptimalBranchingsAlgo(scaled, capacitated=True, compute_nodes=gpus)
     t = time.perf_counter()
     U, k = algo.binary_search()
     assert algo.test(U, k, False)
@@ -247,14 +270,17 @@ def run(args):
                         "allgather_optimum_time": U * scale / k,
                         "rs_ag_sequential_bandwidth_time": 2 * U * scale / k,
                         "algorithmic_bandwidth": args.n * k / (U * scale), "backend": "python-networkx"}
+    result["python_bound_check_sec"] = time.perf_counter() - t
     save()
     print(json.dumps({"network": args.network, "n": args.n, "failure": args.failure, "forest": result["forest"]}), flush=True)
     if not args.bound_only:
         if args.backend == "java":
+            t = time.perf_counter()
             try:
-                metrics, trees, counts, edge_map = java_generate(graph, topology.gpu_nodes, out, args.java_timeout)
+                metrics, trees, counts, edge_map = java_generate(graph, gpus, out, args.java_timeout)
             except (subprocess.SubprocessError, OSError) as exc:
                 result["forest"]["generation_error"] = repr(exc)
+                result["forest"]["java_wall_sec"] = time.perf_counter() - t
                 save()
                 raise
             assert metrics["U"] == U * scale and metrics["k"] == k
@@ -270,12 +296,17 @@ def run(args):
         t = time.perf_counter()
         trees, counts = mapBackSwitchNodes(trees, counts, edge_map)
         result["forest"]["mapback_sec"] = time.perf_counter() - t
-        validation, serialized = validate_trees(graph, set(topology.gpu_nodes), trees, counts, U * scale, k)
+        t = time.perf_counter()
+        validation, serialized = validate_trees(graph, set(gpus), trees, counts, U * scale, k)
+        result["validation_sec"] = time.perf_counter() - t
         result["forest"].update(validation)
         (out / "trees.json").write_text(json.dumps(serialized) + "\n")
+        t = time.perf_counter()
         result["barrier_schedule"] = barrier_schedule(graph, serialized, k)
+        result["barrier_schedule_sec"] = time.perf_counter() - t
         save()
         if args.finite:
+            topology = create_topology(config["network"]["type"], config["network"]["params"])
             problem, weights = forest_problem(topology, serialized, k)
             result["forest_t12"] = finite_solve(problem, 12, out / "forest_t12", weights)
             save()
@@ -289,7 +320,8 @@ def run(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--n", type=int, required=True)
-    parser.add_argument("--network", choices=("closd", "ubd"), default="closd")
+    parser.add_argument("--network", choices=("closd", "ubd", "hpn"), default="closd")
+    parser.add_argument("--inputs", type=Path, help="Physical graphs exported from the current MCNF checkout")
     parser.add_argument("--failure", type=int, required=True)
     parser.add_argument("--label", required=True)
     parser.add_argument("--bound-only", action="store_true")

@@ -1,0 +1,17 @@
+{
+  "hostname": "test-X580-G30",
+  "started_at": "2026-10-15T04:27:49.345690+00:00",
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:09:02) [GCC 11.2.0]",
+  "platform": "Linux-5.4.0-216-generic-x86_64-with-glibc2.31",
+  "conda_env": "math",
+  "gurobi": [
+    12,
+    0,
+    3
+  ],
+  "networkx": "3.5",
+  "numpy": "2.3.3",
+  "scipy": "1.16.2",
+  "threads": 4,
+  "solver_soft_memory_gb": 16
+}

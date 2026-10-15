@@ -1,0 +1,278 @@
+test-X580-G30
+2026-10-15T11:10:55+08:00
+Architecture:                       x86_64
+CPU op-mode(s):                     32-bit, 64-bit
+Byte Order:                         Little Endian
+Address sizes:                      46 bits physical, 48 bits virtual
+CPU(s):                             56
+On-line CPU(s) list:                0-55
+Thread(s) per core:                 2
+Core(s) per socket:                 14
+Socket(s):                          2
+NUMA node(s):                       2
+Vendor ID:                          GenuineIntel
+CPU family:                         6
+Model:                              85
+Model name:                         Intel(R) Xeon(R) Gold 5117 CPU @ 2.00GHz
+Stepping:                           4
+CPU MHz:                            801.955
+CPU max MHz:                        2800.0000
+CPU min MHz:                        800.0000
+BogoMIPS:                           4000.00
+Virtualization:                     VT-x
+L1d cache:                          896 KiB
+L1i cache:                          896 KiB
+L2 cache:                           28 MiB
+L3 cache:                           38.5 MiB
+NUMA node0 CPU(s):                  0-13,28-41
+NUMA node1 CPU(s):                  14-27,42-55
+Vulnerability Gather data sampling: Mitigation; Microcode
+Vulnerability Itlb multihit:        KVM: Mitigation: Split huge pages
+Vulnerability L1tf:                 Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable
+Vulnerability Mds:                  Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Meltdown:             Mitigation; PTI
+Vulnerability Mmio stale data:      Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Retbleed:             Mitigation; IBRS
+Vulnerability Spec store bypass:    Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+Vulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:           Mitigation; IBRS; IBPB conditional; STIBP conditional; RSB filling; PBRSB-eIBRS Not affected; BHI Not affected
+Vulnerability Srbds:                Not affected
+Vulnerability Tsx async abort:      Mitigation; Clear CPU buffers; SMT vulnerable
+Flags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid ept_ad fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts pku ospke md_clear flush_l1d arch_capabilities
+              total        used        free      shared  buff/cache   available
+Mem:          125Gi        20Gi        58Gi        35Mi        46Gi       104Gi
+Swap:         2.0Gi       1.7Gi       257Mi
+Filesystem                 Type  Size  Used Avail Use% Mounted on
+/dev/mapper/LVMvg-lv--home ext4   10T  8.3T  1.2T  88% /home
+TARGET SOURCE                     FSTYPE OPTIONS
+/home  /dev/mapper/LVMvg-lv--home ext4   rw,relatime
+Thu Oct 15 11:10:55 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.181                Driver Version: 570.181        CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla V100-PCIE-32GB           Off |   00000000:18:00.0 Off |                    0 |
+| N/A   67C    P0            216W /  250W |    4063MiB /  32768MiB |     91%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+|   1  Tesla V100-PCIE-32GB           Off |   00000000:3B:00.0 Off |                    0 |
+| N/A   55C    P0            157W /  250W |   11573MiB /  32768MiB |    100%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            2085      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A         4007337      C   ...iniconda3/envs/opd/bin/python       4054MiB |
+|    1   N/A  N/A            2085      G   /usr/lib/xorg/Xorg                        4MiB |
+|    1   N/A  N/A         4001816      C   ...a3/envs/mcnf-cuopt/bin/python      11564MiB |
++-----------------------------------------------------------------------------------------+
+$HOME/anaconda3/envs/math/bin/python
+Python 3.13.5
+# packages in environment at $HOME/anaconda3/envs/math:
+#
+# Name                     Version          Build               Channel
+_libgcc_mutex              0.1              main
+_openmp_mutex              5.1              1_gnu
+antlr4-python3-runtime     4.9.3            pypi_0              pypi
+aom                        3.6.0            h6a678d5_0
+arrow-cpp                  19.0.0           h8011034_4
+aws-c-auth                 0.9.0            h5eee18b_1
+aws-c-cal                  0.9.2            hdb10cc7_0
+aws-c-common               0.12.3           h5eee18b_0
+aws-c-compression          0.3.1            h5eee18b_1
+aws-c-event-stream         0.5.5            h5eee18b_0
+aws-c-http                 0.10.2           h5eee18b_0
+aws-c-io                   0.20.1           hbcb7957_0
+aws-c-mqtt                 0.13.2           h5eee18b_0
+aws-c-s3                   0.8.3            hdb10cc7_0
+aws-c-sdkutils             0.2.4            h5eee18b_0
+aws-checksums              0.2.7            h5eee18b_0
+aws-crt-cpp                0.32.10          h6a678d5_0
+aws-sdk-cpp                1.11.528         h9e09249_1
+blas                       1.0              mkl
+bottleneck                 1.4.2            py313hf0014fa_0
+brotli-python              1.0.9            py313h6a678d5_9
+bzip2                      1.0.8            h5eee18b_6
+c-ares                     1.19.1           h5eee18b_0
+ca-certificates            2025.9.9         h06a4308_0
+cairo                      1.16.0           he5ede1b_6
+cffi                       2.0.0            py313h4eded50_0
+clarabel                   0.11.1           py313h1c792f7_0
+contourpy                  1.3.1            py313hdb19cb5_0
+cramjam                    2.9.1            py313h8a85203_0
+cvxpy                      1.7.3            py313h06a4308_1
+cvxpy-base                 1.7.3            py313hbdd6827_1
+cycler                     0.11.0           pyhd3eb1b0_0
+cyrus-sasl                 2.1.28           h1110e0f_3
+dav1d                      1.2.1            h5eee18b_0
+expat                      2.7.1            h6a678d5_0
+fastparquet                2024.11.0        py313hf0014fa_1
+fontconfig                 2.14.1           h55d465d_3
+fonttools                  4.55.3           py313h5eee18b_0
+freetype                   2.13.3           h4a9f257_0
+fribidi                    1.0.10           h7b6447c_0
+fsspec                     2025.7.0         py313h7040dfc_0
+gflags                     2.2.2            h6a678d5_1
+glog                       0.5.0            h6a678d5_1
+graphite2                  1.3.14           h295c915_1
+gurobipy                   12.0.3           pypi_0              pypi
+harfbuzz                   10.2.0           hdfddeaa_1
+highspy                    1.12.0           pypi_0              pypi
+hydra-core                 1.3.2            pypi_0              pypi
+icu                        73.1             h6a678d5_0
+iniconfig                  2.3.0            pypi_0              pypi
+intel-openmp               2025.0.0         h06a4308_1171
+jinja2                     3.1.6            py313h06a4308_0
+joblib                     1.5.1            py313h06a4308_0
+jpeg                       9e               h5eee18b_3
+kiwisolver                 1.4.8            py313h6a678d5_0
+lcms2                      2.16             h92b89f2_1
+ld_impl_linux-64           2.40             h12ee557_0
+lerc                       4.0.0            h6a678d5_0
+libabseil                  20250127.0       cxx17_h6a678d5_0
+libavif                    1.1.1            h5eee18b_0
+libbrotlicommon            1.0.9            h5eee18b_9
+libbrotlidec               1.0.9            h5eee18b_9
+libbrotlienc               1.0.9            h5eee18b_9
+libcups                    2.4.2            h252cb56_2
+libcurl                    8.14.1           hc1efc7f_1
+libdeflate                 1.22             h5eee18b_0
+libdrm                     2.4.124          h5eee18b_0
+libedit                    3.1.20230828     h5eee18b_0
+libegl                     1.7.0            h5eee18b_2
+libev                      4.33             h7f8727e_1
+libevent                   2.1.12           hdbd6064_1
+libffi                     3.4.4            h6a678d5_1
+libgcc-ng                  11.2.0           h1234567_1
+libgfortran-ng             11.2.0           h00389a5_1
+libgfortran5               11.2.0           h1234567_1
+libgl                      1.7.0            h5eee18b_2
+libglib                    2.84.2           h37c7471_0
+libglvnd                   1.7.0            h5eee18b_2
+libglx                     1.7.0            h5eee18b_2
+libgomp                    11.2.0           h1234567_1
+libgrpc                    1.71.0           h2d74bed_0
+libiconv                   1.16             h5eee18b_3
+libkrb5                    1.21.3           h520c7b4_4
+libllvm15                  15.0.7           he89c38a_4
+libmpdec                   4.0.0            h5eee18b_0
+libnghttp2                 1.57.0           h2d74bed_0
+libosqp                    1.0.0            ha949e79_1
+libpciaccess               0.18             h5eee18b_0
+libpng                     1.6.39           h5eee18b_0
+libpq                      17.4             h02b6914_2
+libprotobuf                5.29.3           h3cdef7c_1
+libre2-11                  2024.07.02       h6a678d5_0
+libsodium                  1.0.18           h7b6447c_0
+libssh2                    1.11.1           h251f7ec_0
+libstdcxx-ng               11.2.0           h1234567_1
+libthrift                  0.15.0           h5e7f578_3
+libtiff                    4.7.0            hde9077f_0
+libuuid                    1.41.5           h5eee18b_0
+libwebp-base               1.3.2            h5eee18b_1
+libxcb                     1.17.0           h9b100fa_0
+libxkbcommon               1.9.1            h69220b7_0
+libxml2                    2.13.8           hfdd30dd_0
+lmdb                       0.9.31           hb25bd0a_0
+lz4-c                      1.9.4            h6a678d5_1
+markupsafe                 3.0.2            py313h5eee18b_0
+matplotlib                 3.10.0           py313h06a4308_1
+matplotlib-base            3.10.0           py313h68cf311_1
+mesalib                    25.1.5           h31e3550_0
+mkl                        2025.0.0         hacee8c2_941
+mkl-service                2.5.2            py313hacdc0fc_0
+mkl_fft                    1.3.11           py313hacdc0fc_1
+mkl_random                 1.2.8            py313h8928b4f_1
+mysql                      8.4.0            h721767e_2
+ncurses                    6.5              h7934f7d_0
+networkx                   3.5              py313h06a4308_0
+numexpr                    2.11.0           py313h41d4191_1
+numpy                      2.3.3            py313h720eef7_0
+numpy-base                 2.3.3            py313h95072fd_0
+omegaconf                  2.3.0            pypi_0              pypi
+openjpeg                   2.5.2            h0d4d230_1
+openldap                   2.6.10           h8e75217_0
+openssl                    3.0.18           hd6dcaed_0
+orc                        2.1.1            hd396ef6_0
+osqp                       1.0.4            py313hb849edd_0
+packaging                  25.0             py313h06a4308_0
+pandas                     2.3.2            py313h280b501_0
+pcre2                      10.42            hebb0a14_1
+pillow                     11.3.0           py313hb1c3d2d_0
+pip                        25.3             pypi_0              pypi
+piqp                       0.6.2            pypi_0              pypi
+pixman                     0.46.4           h7934f7d_0
+pluggy                     1.6.0            pypi_0              pypi
+pthread-stubs              0.3              h0ce48e5_1
+pyarrow                    19.0.0           py313h7934f7d_2
+pycparser                  2.23             py313h06a4308_0
+pygments                   2.20.0           pypi_0              pypi
+pyparsing                  3.2.0            py313h06a4308_0
+pyqt                       6.7.1            py313h8dad735_2
+pyqt6-sip                  13.9.1           py313h6ce4db3_2
+pytest                     9.1.1            pypi_0              pypi
+python                     3.13.5           h4612cfd_100_cp313
+python-dateutil            2.9.0post0       py313h06a4308_2
+python-tzdata              2025.2           pyhd3eb1b0_0
+python_abi                 3.13             0_cp313
+pytz                       2025.2           py313h06a4308_0
+pyyaml                     6.0.3            pypi_0              pypi
+qdldl                      0.1.9.post1      pypi_0              pypi
+qtbase                     6.7.3            h10a5587_4
+qtdeclarative              6.7.3            h7934f7d_1
+qtsvg                      6.7.3            he4bddd1_1
+qttools                    6.7.3            h5a8de97_1
+qtwebchannel               6.7.3            h7934f7d_1
+qtwebsockets               6.7.3            h7934f7d_1
+re2                        2024.07.02       hdb19cb5_0
+readline                   8.3              hc2a1206_0
+s2n                        1.5.14           hdbd6064_0
+scikit-learn               1.7.1            py313h06d7b56_0
+scipy                      1.16.2           py313h33bc11c_0
+scs                        3.2.8            py313hae35feb_1
+setuptools                 80.9.0           pypi_0              pypi
+sip                        6.10.0           py313h6a678d5_0
+six                        1.17.0           py313h06a4308_0
+snappy                     1.2.1            h6a678d5_0
+spirv-tools                2025.1           hdb19cb5_0
+sqlite                     3.50.2           hb25bd0a_1
+tbb                        2022.0.0         hdb19cb5_0
+tbb-devel                  2022.0.0         hdb19cb5_0
+threadpoolctl              3.5.0            py313h7040dfc_0
+tk                         8.6.15           h54e0aa7_0
+tornado                    6.5.1            py313h5eee18b_0
+tzdata                     2025b            h04d1e81_0
+utf8proc                   2.6.1            h5eee18b_1
+wheel                      0.45.1           py313h06a4308_0
+xcb-util                   0.4.1            h5eee18b_2
+xcb-util-cursor            0.1.5            h5eee18b_0
+xcb-util-image             0.4.0            h5eee18b_2
+xcb-util-keysyms           0.4.1            h5eee18b_0
+xcb-util-renderutil        0.3.10           h5eee18b_0
+xcb-util-wm                0.4.2            h5eee18b_0
+xkeyboard-config           2.44             h5eee18b_0
+xorg-libice                1.1.2            h9b100fa_0
+xorg-libsm                 1.2.6            h9b100fa_0
+xorg-libx11                1.8.12           h9b100fa_1
+xorg-libxau                1.0.12           h9b100fa_0
+xorg-libxdmcp              1.1.5            h9b100fa_0
+xorg-libxext               1.3.6            h9b100fa_0
+xorg-libxfixes             6.0.1            h9b100fa_0
+xorg-libxrandr             1.5.4            h9b100fa_0
+xorg-libxrender            0.9.12           h9b100fa_0
+xorg-libxshmfence          1.3.3            h9b100fa_0
+xorg-libxxf86vm            1.1.6            h9b100fa_0
+xorg-xorgproto             2024.1           h5eee18b_1
+xz                         5.6.4            h5eee18b_1
+zlib                       1.2.13           h5eee18b_1
+zstd                       1.5.6            hc292b87_0
+java version "25.0.4.1" 2026-08-18 LTS
+Java(TM) SE Runtime Environment (build 25.0.4.1+1-LTS-5)
+Java HotSpot(TM) 64-Bit Server VM (build 25.0.4.1+1-LTS-5, mixed mode, sharing)
