@@ -208,7 +208,7 @@ def build_report(source, schedule, output):
                "synthesis_queue": synthesis, "schedule_queue": queue, "rows": rows}
     (output / "comparison.json").write_text(json.dumps(payload, indent=2) + "\n")
     with (output / "comparison.csv").open("w", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(handle, fieldnames=list(rows[0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows({k: json.dumps(v, sort_keys=True) if isinstance(v, dict) else v for k, v in row.items()} for row in rows)
 
@@ -235,7 +235,10 @@ def build_report(source, schedule, output):
     plot_runtime(axes, rows)
     fig.suptitle(runtime_title, fontsize=13)
     for extension in ("png", "pdf", "svg"):
-        fig.savefig(output / f"end_to_end.{extension}", dpi=200)
+        path = output / f"end_to_end.{extension}"
+        fig.savefig(path, dpi=200)
+        if extension == "svg":
+            path.write_text("\n".join(line.rstrip() for line in path.read_text().splitlines()) + "\n")
     plt.close(fig)
 
     runtime_columns = [("case", "案例"), ("forest_B_inf_bandwidth_us", "Forest B∞纯带宽μs"),

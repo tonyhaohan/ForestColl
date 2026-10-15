@@ -1,2 +1,5 @@
 # Unified diff context lines may consist of one space.
 benchmarks/results/dinic-validation-v2/backend-trial.patch whitespace=-blank-at-eol
+# Preserve raw run provenance and unified-diff context bytes.
+benchmarks/results/wh1234-issue272-v1/meta/source.patch whitespace=-blank-at-eol
+benchmarks/results/wh1234-issue272-v1/meta/environment.txt whitespace=-blank-at-eol
